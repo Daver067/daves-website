@@ -14,7 +14,7 @@ const TopNav: React.FC<TopNav> = ({}) => {
             Navbar
           </a>
         </div>
-        {/*<!-- Hamburger button for mobile view -->*/}
+        {/* Hamburger button for mobile view */}
         <button
           className="block border-0 bg-transparent px-2 text-black/50 hover:no-underline hover:shadow-none focus:no-underline focus:shadow-none focus:outline-none focus:ring-0 dark:text-neutral-200 lg:hidden"
           type="button"
@@ -24,7 +24,7 @@ const TopNav: React.FC<TopNav> = ({}) => {
           aria-expanded="false"
           aria-label="Toggle navigation"
         >
-          {/*<!-- Hamburger icon --> */}
+          {/* Hamburger icon */}
           <span className="[&>svg]:w-7 [&>svg]:stroke-black/50 dark:[&>svg]:stroke-neutral-200">
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -40,13 +40,16 @@ const TopNav: React.FC<TopNav> = ({}) => {
           </span>
         </button>
 
-        {/*<!-- Collapsible navbar container --> */}
+        {/* Collapsible navbar container */}
         <div
           className="!visible mt-2 hidden flex-grow basis-[100%] items-center lg:mt-0 lg:!flex lg:basis-auto"
           id="navbarSupportedContent2"
         >
-          {/*      <!-- Left links -->*/}{" "}
-          <ul className="list-style-none me-auto flex flex-col ps-0 lg:mt-1 lg:flex-row">
+          {/* Left links */}{" "}
+          <ul
+            className="list-style-none me-auto flex flex-col ps-0 lg:mt-1 lg:flex-row"
+            data-twe-navbar-nav-ref
+          >
             <NavbarItem linkName="Home" linkRoute="#" selected />
             <NavbarItem linkName="Features" linkRoute="#" />
             <NavbarItem linkName="Pricing" linkRoute="#" />
