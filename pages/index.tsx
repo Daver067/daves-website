@@ -6,7 +6,14 @@ const inter = Inter({ subsets: ["latin"] });
 export default function Home() {
   return (
     <div>
-      <TopNav />
+      <TopNav
+        children={[
+          { name: "Home", route: "#" },
+          { name: "My Projects", route: "#" },
+          { name: "About Me", route: "#" },
+          { name: "Contact", route: "#" },
+        ]}
+      />
     </div>
   );
 }

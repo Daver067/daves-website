@@ -3,7 +3,11 @@ import { useState, useEffect, useRef } from "react";
 import Link from "next/link";
 import { useRouter } from "next/router";
 
-const HamburgerMenu: React.FC = () => {
+interface HamburgerMenu {
+  children: { name: string; route: string; type?: "drop-down" | "disabled" }[];
+}
+
+const HamburgerMenu: React.FC<HamburgerMenu> = ({ children }) => {
   const [isOpen, setIsOpen] = useState(false);
   const ref = useRef<HTMLDivElement>(null);
   const router = useRouter();
@@ -65,24 +69,16 @@ const HamburgerMenu: React.FC = () => {
             ref={ref}
             onClick={(e) => e.stopPropagation()}
           >
-            <div
-              className="block text-white text-2xl mb-4 hover:text-gray-300 cursor-pointer p-2 rounded-lg"
-              onClick={() => handleNavigation("/about")}
-            >
-              About
-            </div>
-            <div
-              className="block text-white text-2xl mb-4 hover:text-gray-300 cursor-pointer p-2 rounded-lg"
-              onClick={() => handleNavigation("/services")}
-            >
-              Services
-            </div>
-            <div
-              className="block text-white text-2xl mb-4 hover:text-gray-300 cursor-pointer p-2 rounded-lg"
-              onClick={() => handleNavigation("/contact")}
-            >
-              Contact
-            </div>
+            {children.map((item) => {
+              return (
+                <div
+                  className="block text-white text-2xl mb-4 hover:text-gray-300 cursor-pointer p-2 rounded-lg"
+                  onClick={() => handleNavigation(item.route)}
+                >
+                  {item.name}
+                </div>
+              );
+            })}
           </div>
         </div>
       )}
