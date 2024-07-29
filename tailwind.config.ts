@@ -18,6 +18,8 @@ const config: Config = {
         "secondary-color": "var(--secondary-color)",
         "tertiary-color": "var(--tertiary-color)",
         "text-color": "var(--text-color)",
+        "tertiary-color-hovering": "var(--tertiary-color-hovering)",
+        "text-color-hovering": "var(--text-color-hovering)",
       },
     },
   },

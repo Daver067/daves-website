@@ -1,11 +1,13 @@
-import DisabledLink from "./navbar_items/disabled_link";
-import NavbarItem from "./navbar_items/navbar_item";
 import HamburgerMenu from "./navbar_items/hamburger";
-import { ReactElement } from "react";
 import CollapsibleMenu from "./navbar_items/collapsible_large_navbar";
 
 interface TopNav {
-  children: { name: string; route: string; type?: "drop-down" | "disabled" }[];
+  children: {
+    name: string;
+    route: string;
+    type?: "drop-down" | "disabled" | "link";
+    children?: { name: string; route: string; type?: "disabled" }[];
+  }[];
 }
 const TopNav: React.FC<TopNav> = ({ children }) => {
   return (

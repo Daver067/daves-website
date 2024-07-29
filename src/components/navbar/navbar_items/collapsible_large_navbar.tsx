@@ -1,11 +1,12 @@
 // src/components/CollapsibleMenu.tsx
+import DropDown from "./dropdown";
 import NavbarItem from "./navbar_item";
 interface CollapsibleMenu {
   children: {
     name: string;
     route: string;
-    type?: "drop-down" | "disabled";
-    children?: { name: string; route: string; type?: "disabled" };
+    type?: "drop-down" | "disabled" | "link";
+    children?: { name: string; route: string; type?: "disabled" }[];
   }[];
 }
 const CollapsibleMenu: React.FC<CollapsibleMenu> = ({ children }) => {
@@ -16,7 +17,19 @@ const CollapsibleMenu: React.FC<CollapsibleMenu> = ({ children }) => {
     >
       <ul className="w-full list-style-none justify-center flex flex-col ps-0 lg:mt-1 lg:flex-row">
         {children.map((item) => {
-          return <NavbarItem linkName={item.name} linkRoute={item.route} />;
+          if (item.type === "drop-down") {
+            if (item.children === undefined) return;
+            return (
+              <DropDown dropDownName={item.name} children={item.children} />
+            );
+          } else
+            return (
+              <NavbarItem
+                linkName={item.name}
+                linkRoute={item.route}
+                type={item.type}
+              />
+            );
         })}
       </ul>
     </div>

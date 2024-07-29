@@ -4,7 +4,11 @@ import Link from "next/link";
 import { useRouter } from "next/router";
 
 interface HamburgerMenu {
-  children: { name: string; route: string; type?: "drop-down" | "disabled" }[];
+  children: {
+    name: string;
+    route: string;
+    type?: "drop-down" | "disabled" | "link";
+  }[];
 }
 
 const HamburgerMenu: React.FC<HamburgerMenu> = ({ children }) => {
@@ -70,14 +74,31 @@ const HamburgerMenu: React.FC<HamburgerMenu> = ({ children }) => {
             onClick={(e) => e.stopPropagation()}
           >
             {children.map((item) => {
-              return (
-                <div
-                  className="block text-white text-2xl mb-4 hover:text-gray-300 cursor-pointer p-2 rounded-lg"
-                  onClick={() => handleNavigation(item.route)}
-                >
-                  {item.name}
-                </div>
-              );
+              if (item.type === "link") {
+                return (
+                  <div
+                    className="block text-white text-2xl mb-4 hover:text-gray-300 cursor-pointer p-2 rounded-lg"
+                    onClick={() => handleNavigation(item.route)}
+                  >
+                    {item.name}
+                  </div>
+                );
+              } else if (item.type === "drop-down") {
+                return (
+                  <div
+                    className="block text-white text-2xl mb-4 hover:text-gray-300 cursor-pointer p-2 rounded-lg"
+                    onClick={() => handleNavigation(item.route)}
+                  >
+                    {item.name}
+                  </div>
+                );
+              } else if (item.type === "disabled") {
+                return (
+                  <div className="block text-grey text-2xl mb-4 p-2 rounded-lg">
+                    {item.name}
+                  </div>
+                );
+              }
             })}
           </div>
         </div>

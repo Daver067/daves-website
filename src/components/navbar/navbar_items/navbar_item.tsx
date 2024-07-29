@@ -1,15 +1,21 @@
 import { link } from "fs";
+import DisabledLink from "./disabled_link";
 
 interface NavbarItem {
   linkName: string;
   linkRoute: string;
   selected?: boolean;
+  type?: "drop-down" | "disabled" | "link";
 }
 const NavbarItem: React.FC<NavbarItem> = ({
   linkName,
   linkRoute,
   selected = false,
+  type,
 }) => {
+  if (type === "disabled") {
+    return <DisabledLink linkName={linkName} />;
+  }
   if (selected) {
     return (
       <li className="my-4 ps-2 lg:my-0 lg:pe-1 lg:ps-2">
