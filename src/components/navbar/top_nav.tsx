@@ -20,8 +20,6 @@ const TopNav: React.FC<TopNav> = ({ children }) => {
         </div>
 
         <HamburgerMenu children={children} />
-
-        {/* Collapsible navbar container */}
         <CollapsibleMenu children={children} />
       </div>
     </nav>
