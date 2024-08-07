@@ -22,14 +22,14 @@ const Project: React.FC<Project> = ({
       <div className="pb-3 border-b-2 border-zinc-500">
         <div className="h-full pt-4 px-4 mx-auto max-w-7xl sm:px-6 flex lg:px-8 min-h-64 ">
           <div className="w-[30%] self-center">
-            <Image src={img} className=" w-44 m-auto" alt={name} />
+            <Image src={img} className=" w-auto m-auto" alt={name} />
           </div>
           <div className="flex flex-col items-center w-[70%] text-center text-gray-300 ">
             <h1 className="mb-4 text-4xl font-bold leading-tight font-pj">
               {name}
             </h1>
             <p className="px-6 text-lg text-left font-inter">{description}</p>
-            <div className="flex justify-evenly mt-auto mb-4">
+            <div className="flex justify-evenly mt-auto pt-4 mb-2">
               <button
                 onClick={() => router.push(repo)}
                 type="button"
