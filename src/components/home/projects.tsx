@@ -1,6 +1,7 @@
 import phlingerPhoto from "../../img/phlinger.png";
 import mocc from "../../img/mocc.png";
 import solitaire from "../../img/solitaire.png";
+import personal from "../../img/personal.png";
 const projects = [
   {
     name: "Phone Phlinger",
@@ -25,6 +26,13 @@ const projects = [
       "This project was my first collaborative effort. Solitaire was built to learn how to use git with another developer, along with learning how to combine skills and styles with another developer. This was built with vanilla JS.",
     repo: "https://github.com/Daver067/card-games",
     website: "https://daver067.github.io/card-games/",
+  },
+  {
+    name: "Personal Site",
+    img: personal,
+    description: "This site was built by me! I used NextJS, TailwindCSS ",
+    repo: "  https://github.com/Daver067/daves-website",
+    website: "https://google.com",
   },
 ];
 
