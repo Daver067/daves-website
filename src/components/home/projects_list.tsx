@@ -17,6 +17,7 @@ const ProjectsList = () => {
             description={project.description}
             repo={project.repo}
             website={project.website}
+            languages={project.languages}
           />
         );
       })}

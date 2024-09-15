@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import Image, { StaticImageData } from "next/image";
 import { useRouter } from "next/navigation";
 import python from "../../img/languages/python.svg";
+import languagepics from "./languages";
+import { Languages } from "next/dist/lib/metadata/types/alternative-urls-types";
 
 interface Project {
   name: string;
@@ -9,6 +11,7 @@ interface Project {
   description: string;
   repo: string;
   website: string;
+  languages: string[];
 }
 const Project: React.FC<Project> = ({
   name,
@@ -16,6 +19,7 @@ const Project: React.FC<Project> = ({
   description,
   repo,
   website,
+  languages,
 }) => {
   const [flipped, setFlipped] = useState(true);
   const router = useRouter();
@@ -23,10 +27,15 @@ const Project: React.FC<Project> = ({
     <div
       className={` ${
         flipped ? "" : "flipped"
-      } back top-0 left-0 bottom-0 right-0 m-auto text-center absolute flex justify-center items-center`}
+      } back top-0 left-0 bottom-0 right-0 m-auto absolute grid grid-cols-4 gap-2`}
     >
-      hey this is the back
-      <Image src={python} alt="snake" />
+      {languages.map((language: string) => {
+        return (
+          <div className="flex align-middle items-center justify-center">
+            {languagepics[language as keyof typeof languagepics]}
+          </div>
+        );
+      })}
     </div>
   );
 
@@ -37,20 +46,6 @@ const Project: React.FC<Project> = ({
         flipped ? "" : "flipped"
       } top-0 left-0 bottom-0 right-0 m-auto front absolute`}
       alt={name}
-      onMouseEnter={(e) => {
-        const { target } = e;
-        if (target instanceof HTMLElement) {
-          console.log(target.classList);
-          setFlipped(!flipped);
-        }
-      }}
-      onMouseLeave={(e) => {
-        const { target } = e;
-        if (target instanceof HTMLElement) {
-          console.log(target.classList);
-          setFlipped(!flipped);
-        }
-      }}
     />
   );
 
@@ -58,7 +53,21 @@ const Project: React.FC<Project> = ({
     <div>
       <div className="pb-3 border-b-2 border-zinc-500">
         <div className="h-full pt-4 px-4 mx-auto max-w-7xl sm:px-6 flex lg:px-8 min-h-64 ">
-          <div className="w-[30%] relative">
+          <div
+            className="w-[30%] relative"
+            onMouseEnter={(e) => {
+              const { target } = e;
+              if (target instanceof HTMLElement) {
+                setFlipped(!flipped);
+              }
+            }}
+            onMouseLeave={(e) => {
+              const { target } = e;
+              if (target instanceof HTMLElement) {
+                setFlipped(!flipped);
+              }
+            }}
+          >
             {back} {front}
           </div>
           <div className="flex flex-col items-center w-[70%] text-center text-gray-300 ">
