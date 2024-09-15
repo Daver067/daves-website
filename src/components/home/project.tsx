@@ -1,10 +1,7 @@
 import React, { useState } from "react";
 import Image, { StaticImageData } from "next/image";
 import { useRouter } from "next/navigation";
-import python from "../../img/languages/python.svg";
 import languagepics from "./languages";
-import { Languages } from "next/dist/lib/metadata/types/alternative-urls-types";
-
 interface Project {
   name: string;
   img: StaticImageData;
@@ -25,27 +22,39 @@ const Project: React.FC<Project> = ({
   const router = useRouter();
   const back = (
     <div
-      className={` ${
-        flipped ? "" : "flipped"
-      } back top-0 left-0 bottom-0 right-0 m-auto absolute grid grid-cols-4 gap-2`}
+      className={` back top-0 left-0 bottom-0 right-0 m-auto absolute  `}
+      style={{
+        transition: "transform 2s ease",
+        backfaceVisibility: "hidden",
+        transform: `perspective(1000px) rotateY(${
+          flipped ? "180deg" : "0deg"
+        })`,
+      }}
     >
-      {languages.map((language: string) => {
-        return (
-          <div className="flex align-middle items-center justify-center">
-            {languagepics[language as keyof typeof languagepics]}
-          </div>
-        );
-      })}
+      <div className="h-full w-full grid grid-cols-4 gap-2">
+        {languages.map((language: string) => {
+          return (
+            <div className="flex align-middle items-center justify-center">
+              {languagepics[language as keyof typeof languagepics]}
+            </div>
+          );
+        })}
+      </div>
     </div>
   );
 
   const front = (
     <Image
       src={img}
-      className={` ${
-        flipped ? "" : "flipped"
-      } top-0 left-0 bottom-0 right-0 m-auto front absolute`}
+      className={` top-0 left-0 bottom-0 right-0 m-auto front absolute`}
       alt={name}
+      style={{
+        transition: "transform 2s ease",
+        backfaceVisibility: "hidden",
+        transform: ` perspective(1000px) rotateY(${
+          flipped ? "0deg" : "-180deg"
+        })`,
+      }}
     />
   );
 

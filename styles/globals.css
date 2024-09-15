@@ -37,27 +37,6 @@ body {
     )
     rgb(var(--background-start-rgb));
 }
-.front,
-.back {
-  transition: transform 2s ease;
-  -webkit-backface-visibility: hidden;
-  backface-visibility: hidden;
-}
-.front {
-  transform: translate(-50%, -50%);
-
-  transform: perspective(1000px) rotateY(0deg);
-}
-.front.flipped {
-  --flip-direction: 180deg;
-  transform: perspective(1000px) rotateY(-180deg);
-}
-.back {
-  transform: perspective(1000px) rotateY(180deg);
-}
-.back.flipped {
-  transform: perspective(1000px) rotateY(0deg);
-}
 
 @layer utilities {
   .text-balance {
