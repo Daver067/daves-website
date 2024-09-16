@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import Image, { StaticImageData } from "next/image";
 import { useRouter } from "next/navigation";
 import languagepics from "./languages";
+import Flippable from "../flippable/Flippable";
 interface Project {
   name: string;
   img: StaticImageData;
@@ -21,63 +22,29 @@ const Project: React.FC<Project> = ({
   const [flipped, setFlipped] = useState(true);
   const router = useRouter();
   const back = (
-    <div
-      className={` back top-0 left-0 bottom-0 right-0 m-auto absolute  `}
-      style={{
-        transition: "transform 2s ease",
-        backfaceVisibility: "hidden",
-        transform: `perspective(1000px) rotateY(${
-          flipped ? "180deg" : "0deg"
-        })`,
-      }}
-    >
-      <div className="h-full w-full grid grid-cols-4 gap-2">
-        {languages.map((language: string) => {
-          return (
-            <div className="flex align-middle items-center justify-center">
-              {languagepics[language as keyof typeof languagepics]}
-            </div>
-          );
-        })}
-      </div>
+    <div className="h-full w-full grid grid-cols-4 gap-2">
+      {languages.map((language: string) => {
+        return (
+          <div className="flex align-middle items-center justify-center">
+            {languagepics[language as keyof typeof languagepics]}
+          </div>
+        );
+      })}
     </div>
   );
 
   const front = (
-    <Image
-      src={img}
-      className={` top-0 left-0 bottom-0 right-0 m-auto front absolute`}
-      alt={name}
-      style={{
-        transition: "transform 2s ease",
-        backfaceVisibility: "hidden",
-        transform: ` perspective(1000px) rotateY(${
-          flipped ? "0deg" : "-180deg"
-        })`,
-      }}
-    />
+    <div className="h-full flex flex-col">
+      <Image className="" src={img} alt={name} />
+    </div>
   );
 
   return (
     <div>
       <div className="pb-3 border-b-2 border-zinc-500">
         <div className="h-full pt-4 px-4 mx-auto max-w-7xl sm:px-6 flex lg:px-8 min-h-64 ">
-          <div
-            className="w-[30%] relative"
-            onMouseEnter={(e) => {
-              const { target } = e;
-              if (target instanceof HTMLElement) {
-                setFlipped(!flipped);
-              }
-            }}
-            onMouseLeave={(e) => {
-              const { target } = e;
-              if (target instanceof HTMLElement) {
-                setFlipped(!flipped);
-              }
-            }}
-          >
-            {back} {front}
+          <div className="w-[30%] relative">
+            <Flippable front={front} back={back} />
           </div>
           <div className="flex flex-col items-center w-[70%] text-center text-gray-300 ">
             <h1 className="mb-4 text-4xl font-bold leading-tight font-pj">

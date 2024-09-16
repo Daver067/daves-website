@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import "./flippable.css";
 interface Flippable {
   front: React.ReactElement;
   back: React.ReactElement;
@@ -9,7 +8,7 @@ const Flippable: React.FC<Flippable> = ({ front, back }) => {
 
   return (
     <div
-      className="container"
+      className="w-full h-full"
       onMouseEnter={(e) => {
         const { target } = e;
         if (target instanceof HTMLElement) {
@@ -24,7 +23,7 @@ const Flippable: React.FC<Flippable> = ({ front, back }) => {
       }}
     >
       <div
-        className={`  top-0 left-0 bottom-0 right-0 m-auto front absolute`}
+        className={` top-0 left-0 bottom-0 right-0 absolute `}
         style={{
           transition: "transform 2s ease",
           backfaceVisibility: "hidden",
@@ -36,7 +35,7 @@ const Flippable: React.FC<Flippable> = ({ front, back }) => {
         {front}
       </div>
       <div
-        className={` back top-0 left-0 bottom-0 right-0 m-auto absolute`}
+        className={` back top-0 left-0 bottom-0 right-0 absolute`}
         style={{
           transition: "transform 2s ease",
           backfaceVisibility: "hidden",
