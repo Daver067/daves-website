@@ -18,25 +18,27 @@ import webpack from "../../img/languages/webpack.svg";
 
 const languagespics = {
   python: <Image src={python} alt="snake" className=" max-w-12 max-h-12 " />,
-  aws: <Image src={aws} alt="snake" className=" max-w-12 max-h-12 " />,
-  bash: <Image src={bash} alt="snake" className=" max-w-12 max-h-12 " />,
-  css: <Image src={css} alt="snake" className=" max-w-12 max-h-12 " />,
-  gmail: <Image src={gmail} alt="snake" className=" max-w-12 max-h-12 " />,
-  html: <Image src={html} alt="snake" className=" max-w-12 max-h-12 " />,
-  js: <Image src={js} alt="snake" className=" max-w-12 max-h-12 " />,
-  nextjs: <Image src={nextjs} alt="snake" className=" max-w-12 max-h-12 " />,
+  aws: <Image src={aws} alt="aws" className=" max-w-12 max-h-12 " />,
+  bash: <Image src={bash} alt="bash" className=" max-w-12 max-h-12 " />,
+  css: <Image src={css} alt="css" className=" max-w-12 max-h-12 " />,
+  gmail: <Image src={gmail} alt="gmail" className=" max-w-12 max-h-12 " />,
+  html: <Image src={html} alt="html" className=" max-w-12 max-h-12 " />,
+  js: <Image src={js} alt="javascript" className=" max-w-12 max-h-12 " />,
+  nextjs: <Image src={nextjs} alt="nextjs" className=" max-w-12 max-h-12 " />,
   postgres: (
-    <Image src={postgres} alt="snake" className=" max-w-12 max-h-12 " />
+    <Image src={postgres} alt="postgres" className=" max-w-12 max-h-12 " />
   ),
-  react: <Image src={react} alt="snake" className=" max-w-12 max-h-12 " />,
-  sass: <Image src={sass} alt="snake" className=" max-w-12 max-h-12 " />,
-  sqlite: <Image src={sqlite} alt="snake" className=" max-w-12 max-h-12 " />,
+  react: <Image src={react} alt="react" className=" max-w-12 max-h-12 " />,
+  sass: <Image src={sass} alt="sass" className=" max-w-12 max-h-12 " />,
+  sqlite: <Image src={sqlite} alt="sqlite" className=" max-w-12 max-h-12 " />,
   tailwind: (
-    <Image src={tailwind} alt="snake" className=" max-w-12 max-h-12 " />
+    <Image src={tailwind} alt="tailwind" className=" max-w-12 max-h-12 " />
   ),
-  twilio: <Image src={twilio} alt="snake" className=" max-w-12 max-h-12 " />,
-  vercel: <Image src={vercel} alt="snake" className=" max-w-12 max-h-12 " />,
-  webpack: <Image src={webpack} alt="snake" className=" max-w-12 max-h-12 " />,
+  twilio: <Image src={twilio} alt="twilio" className=" max-w-12 max-h-12 " />,
+  vercel: <Image src={vercel} alt="vercel" className=" max-w-12 max-h-12 " />,
+  webpack: (
+    <Image src={webpack} alt="webpack" className=" max-w-12 max-h-12 " />
+  ),
 };
 
 export default languagespics;

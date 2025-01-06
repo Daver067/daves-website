@@ -6,6 +6,7 @@ import personal from "../../img/personal.png";
 const projects = [
   {
     name: "Phone Phlinger",
+    route: "/phlinger",
     img: phlingerPhoto,
     description:
       "Phone Phlinger is a tool used to make Twilio interface more user friendly. It enables easy use of Call-Forwarding, Voicemail, Whisper Messages, Caller Greeting Messages, Call Recording, and Call Tracking for all of your Twilio phone numbers. It also includes email followups on all calls to your Twilio Phone Numbers. A Twilio account is required. Sorry, the Repo is currently on private, please contact me for a chance to view the Repo.",
@@ -28,6 +29,7 @@ const projects = [
   },
   {
     name: "Calgary Cleaning Site",
+    route: "/mocc",
     img: mocc,
     description:
       "This project was built for a client of a Calgary based cleaning site. It is hosted on netlify, and is not optimized for SEO.",
@@ -37,6 +39,7 @@ const projects = [
   },
   {
     name: "Solitaire",
+    route: "/solitaire",
     img: solitaire,
     description:
       "This project was my first collaborative effort. Solitaire was built to learn how to use git with another developer, along with learning how to combine skills and styles with another developer. This was built with vanilla JS.",
@@ -46,6 +49,7 @@ const projects = [
   },
   {
     name: "Personal Site",
+    route: "/personalsite",
     img: personal,
     description: "This site was built by me! I used NextJS, TailwindCSS ",
     repo: "  https://github.com/Daver067/daves-website",

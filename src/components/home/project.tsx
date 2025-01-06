@@ -5,6 +5,7 @@ import languagepics from "./languages";
 import Flippable from "../flippable/Flippable";
 interface Project {
   name: string;
+  route: string;
   img: StaticImageData;
   description: string;
   repo: string;
@@ -13,6 +14,7 @@ interface Project {
 }
 const Project: React.FC<Project> = ({
   name,
+  route,
   img,
   description,
   repo,
@@ -46,9 +48,15 @@ const Project: React.FC<Project> = ({
             <Flippable front={front} back={back} />
           </div>
           <div className="flex flex-col items-center w-full md:w-[70%] text-center text-gray-300 ">
-            <h1 className="mb-4 text-4xl font-bold leading-tight font-pj">
-              {name}
-            </h1>
+            <a id={route}>
+              <h1
+                id={route}
+                className="mb-4 text-4xl font-bold leading-tight font-pj"
+              >
+                {name}
+              </h1>
+            </a>
+
             <p className="px-6 text-lg text-left font-inter">{description}</p>
             <div className="flex justify-evenly mt-auto pt-4 mb-2">
               <button

@@ -1,30 +1,42 @@
-import Background from "../../img/me_and_pup.jpeg";
+import languagespics from "../home/languages";
+
 const HeroAbout = () => {
   return (
-    <div
-      className="h-screen -mt-10"
-      style={{
-        backgroundImage: `url(/me_and_pup.jpeg)`,
-        backgroundPosition: "center",
-        backgroundRepeat: "no-repeat",
-      }}
-    >
-      <div className="h-screen bg-black/50">
-        <div className="my-10 mx-32 ">
-          <div className="overflow-x-hidden  pb-12">
-            <section className="pt-12  sm:pt-16">
-              <div className="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8 sm:flex-col md:flex md:flex-row gap-10  ">
-                <div className="max-w-2xl mx-auto text-center m-auto ">
-                  <h1 className="px-6 text-lg text-gray-300 font-inter">
-                    Passionate, Dedicated, Innovative, Resourceful,
-                    Self-Motivated
-                  </h1>
-                  <p className="mt-5 text-4xl font-bold leading-tight text-gray-100 sm:leading-tight sm:text-5xl lg:text-6xl lg:leading-tight font-pj">
-                    The software developer that will meet your needs
-                  </p>
-                </div>
-              </div>
-            </section>
+    <div className="h-full w w-full bg-black/50">
+      <div className="w-full text-center text-4xl py-20 underline decoration-1 underline-offset-4">
+        About Me
+      </div>
+      <div className="w-full flex justify-center gap-10">
+        <div className="w-[40%] text-base px-10">
+          <div className="text-2xl pb-8">Hey I'm Dave!</div>
+          <div className="font-poppins tracking-wide">
+            <p className="pb-4">
+              I'm a self taught web developer from Alberta, Canada where I also
+              work full time as a licensed Electrician.
+            </p>
+            <p className="pb-4">
+              I began my programming journey following{" "}
+              <a
+                className="text-blue-500 hover:text-blue-700 hover:underline transition duration-200 ease-in-out"
+                href="https://www.theodinproject.com"
+              >
+                The Odin Project's
+              </a>{" "}
+              Full Stack JavaScript Course.
+            </p>
+            <p>
+              After The Odin Project I continued my learning working on personal
+              projects such as Solitaire, and Phone Phlinger, and this personal
+              site.
+            </p>
+          </div>
+        </div>
+        <div className="w-[40%] text-lg px-10">
+          <div className="text-2xl pb-4">Some of my skills</div>
+          <div className="flex flex-wrap gap-6">
+            {Object.keys(languagespics).map((language) => {
+              return languagespics[language];
+            })}
           </div>
         </div>
       </div>
