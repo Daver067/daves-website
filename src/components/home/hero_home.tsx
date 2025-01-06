@@ -4,10 +4,10 @@ import Image from "next/image";
 
 const HeroHome = () => {
   return (
-    <div className="my-10 bg-zinc-800 mx-32 ">
+    <div className="my-10 bg-zinc-800 lg:mx-32 mx-6 ">
       <div className="overflow-x-hidden  pb-12">
         <section className="pt-12  sm:pt-16">
-          <div className="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8 sm:flex-col md:flex md:flex-row gap-10  ">
+          <div className="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8 flex-col flex md:flex-row gap-10  ">
             <div className="max-w-2xl mx-auto text-center m-auto ">
               <h1 className="px-6 text-lg text-gray-300 font-inter">
                 Passionate, Dedicated, Innovative, Resourceful, Self-Motivated

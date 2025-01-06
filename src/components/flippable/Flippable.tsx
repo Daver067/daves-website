@@ -35,7 +35,7 @@ const Flippable: React.FC<Flippable> = ({ front, back }) => {
         {front}
       </div>
       <div
-        className={` back top-0 left-0 bottom-0 right-0 absolute`}
+        className={` back top-0 left-0 bottom-0 right-0 absolute flex items-center`}
         style={{
           transition: "transform 2s ease",
           backfaceVisibility: "hidden",

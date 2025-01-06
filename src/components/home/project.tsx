@@ -19,7 +19,6 @@ const Project: React.FC<Project> = ({
   website,
   languages,
 }) => {
-  const [flipped, setFlipped] = useState(true);
   const router = useRouter();
   const back = (
     <div className="h-full w-full grid grid-cols-4 gap-2">
@@ -42,11 +41,11 @@ const Project: React.FC<Project> = ({
   return (
     <div>
       <div className="pb-3 border-b-2 border-zinc-500">
-        <div className="h-full pt-4 px-4 mx-auto max-w-7xl sm:px-6 flex lg:px-8 min-h-64 ">
-          <div className="w-[30%] relative">
+        <div className="h-full pt-4 px-4 mx-auto sm:px-6 flex flex-col items-center md:flex-row lg:px-8 min-h-64 ">
+          <div className="w-[90%] h-80 md:w-[30%] relative">
             <Flippable front={front} back={back} />
           </div>
-          <div className="flex flex-col items-center w-[70%] text-center text-gray-300 ">
+          <div className="flex flex-col items-center w-full md:w-[70%] text-center text-gray-300 ">
             <h1 className="mb-4 text-4xl font-bold leading-tight font-pj">
               {name}
             </h1>
