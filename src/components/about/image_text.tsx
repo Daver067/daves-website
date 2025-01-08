@@ -17,7 +17,9 @@ const Image_And_Text: React.FC<Image_And_Text> = ({
           {header}
         </h1>
         {paragraphs.map((p) => {
-          return <p className="relative leading-6 text-left p-2  ">{p}</p>;
+          return (
+            <p className="relative leading-6 text-left p-2 text-base ">{p}</p>
+          );
         })}
       </div>
     </div>

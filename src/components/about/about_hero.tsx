@@ -6,14 +6,14 @@ import Image from "next/image";
 
 const HeroAbout = () => {
   return (
-    <div className="h-full w w-full bg-black/50">
+    <div className="h-full w w-full bg-black/50 font-poppins">
       <div className="w-full text-center text-4xl py-20 underline decoration-1 underline-offset-4">
         About Me
       </div>
       <div className="w-full flex justify-center gap-10 bg-zinc-800 py-10">
         <div className="w-[40%] text-base px-10">
           <div className="text-2xl pb-8">Hey I'm Dave!</div>
-          <div className="font-poppins tracking-wide">
+          <div className=" tracking-wide">
             <p className="pb-4">
               I'm a self taught web developer from Alberta, Canada where I also
               work full time as a licensed Electrician.
