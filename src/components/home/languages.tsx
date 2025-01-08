@@ -23,7 +23,9 @@ const languagespics = {
   css: <Image src={css} alt="css" className=" max-w-12 max-h-12 " />,
   gmail: <Image src={gmail} alt="gmail" className=" max-w-12 max-h-12 " />,
   html: <Image src={html} alt="html" className=" max-w-12 max-h-12 " />,
-  js: <Image src={js} alt="javascript" className=" max-w-12 max-h-12 " />,
+  javascript: (
+    <Image src={js} alt="javascript" className=" max-w-12 max-h-12 " />
+  ),
   nextjs: <Image src={nextjs} alt="nextjs" className=" max-w-12 max-h-12 " />,
   postgres: (
     <Image src={postgres} alt="postgres" className=" max-w-12 max-h-12 " />
