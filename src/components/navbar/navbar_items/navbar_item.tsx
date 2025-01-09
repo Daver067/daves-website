@@ -1,6 +1,6 @@
-import { link } from "fs";
 import DisabledLink from "./disabled_link";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 
 interface NavbarItem {
   linkName: string;
@@ -17,7 +17,7 @@ const NavbarItem: React.FC<NavbarItem> = ({
   if (type === "disabled") {
     return <DisabledLink linkName={linkName} />;
   }
-  if (selected) {
+  if (usePathname() === linkRoute) {
     return (
       <li className="my-4 ps-2 lg:my-0 lg:pe-1 lg:ps-2">
         <Link

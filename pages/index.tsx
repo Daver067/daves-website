@@ -21,8 +21,7 @@ export default function Home() {
             }),
           },
           { name: "About Me", route: "/about", type: "link" },
-          { name: "Contact", route: "#", type: "link" },
-          { name: "Disabled", route: "#", type: "disabled" },
+          { name: "Contact", route: "/contact", type: "link" },
         ]}
       />
       <HeroHome />

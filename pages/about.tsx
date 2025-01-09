@@ -4,7 +4,7 @@ import { Inter } from "next/font/google";
 
 const inter = Inter({ subsets: ["latin"] });
 
-export default function Home() {
+export default function About() {
   return (
     <div>
       <TopNav
@@ -21,8 +21,7 @@ export default function Home() {
             ],
           },
           { name: "About Me", route: "/about", type: "link" },
-          { name: "Contact", route: "#", type: "link" },
-          { name: "Disabled", route: "#", type: "disabled" },
+          { name: "Contact", route: "/contact", type: "link" },
         ]}
       />
       <HeroAbout />
