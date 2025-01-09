@@ -38,6 +38,21 @@ const CarouselContainer: React.FC<CarouselContainer> = ({ slides }) => {
           ></FaArrowRightLong>
         </button>
       </div>
+      <div className="absolute bottom-[2%] flex w-full gap-2 justify-center">
+        {slides.map((s, i) => {
+          return (
+            <div
+              onClick={() => {
+                setCurrent(i);
+              }}
+              key={"oval" + i}
+              className={`rounded-full w-10 h-[4px] cursor-pointer ${
+                i == current ? "bg-white" : "bg-gray-600"
+              }  border-black hover:bg-gray-100`}
+            ></div>
+          );
+        })}
+      </div>
     </div>
   );
 };
