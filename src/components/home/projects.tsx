@@ -1,7 +1,7 @@
-import phlingerPhoto from "../../img/phlinger.png";
-import mocc from "../../img/mocc.png";
-import solitaire from "../../img/solitaire.png";
-import personal from "../../img/personal.png";
+import phlingerPhoto from "../../img/projects/phlinger.png";
+import mocc from "../../img/projects/mocc.png";
+import solitaire from "../../img/projects/solitaire.png";
+import personal from "../../img/projects/personal.png";
 
 const projects = [
   {

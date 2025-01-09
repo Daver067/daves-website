@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import Image, { StaticImageData } from "next/image";
 import { useRouter } from "next/navigation";
-import languagepics from "./languages";
+import languagepics from "../../img/languages";
 import Flippable from "../flippable/Flippable";
 interface Project {
   name: string;

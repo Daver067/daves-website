@@ -1,18 +1,27 @@
-import languagespics from "../home/languages";
+import languagespics from "../../img/languages";
 import Image_And_Text from "./image_text";
 import Tooltip from "./tooltip";
 import daverPhoto from "../../img/daver_photo.jpg";
 import Image from "next/image";
+import CarouselContainer from "./carousel/carousel_container";
+import photos_img from "@/src/img/photos";
 
 const HeroAbout = () => {
+  const slides = [
+    photos_img.cambodia,
+    photos_img.cycle,
+    photos_img.engagement,
+    photos_img.family,
+    photos_img.running,
+  ];
   return (
     <div className="h-full w w-full bg-black/50 font-poppins">
       <div className="w-full text-center text-4xl py-20 underline decoration-1 underline-offset-4">
         About Me
       </div>
-      <div className="w-full flex justify-center gap-10 bg-zinc-800 py-10">
-        <div className="w-[40%] text-base px-10">
-          <div className="text-2xl pb-8">Hey I'm Dave!</div>
+      <div className="w-full flex justify-center gap-10 bg-zinc-800 flex-col py-10 md:flex-row">
+        <div className=" w-[80%] m-auto px-5 text-base md:px-10 md:w-[40%]">
+          <div className="text-2xl pb-8 text-center">Hey I'm Dave!</div>
           <div className=" tracking-wide">
             <p className="pb-4">
               I'm a self taught web developer from Alberta, Canada where I also
@@ -40,8 +49,8 @@ const HeroAbout = () => {
             </p>
           </div>
         </div>
-        <div className="w-[40%] text-lg px-10">
-          <div className="text-2xl pb-4">Some of my skills</div>
+        <div className="text-lg m-auto px-5 w-[80%] md:px-10 md:w-[40%] ">
+          <div className="text-2xl pb-10 text-center">Some of my skills</div>
           <div className="flex flex-wrap gap-10">
             {Object.entries(languagespics).map(([key, value], index) => {
               return <Tooltip text={key} children={value}></Tooltip>;
@@ -51,11 +60,9 @@ const HeroAbout = () => {
       </div>
       <Image_And_Text
         img={
-          <Image
-            src={daverPhoto}
-            className="lg:w-60 rounded-full w-44 m-auto pt-10 md:pt-0"
-            alt="Avatar"
-          />
+          <div className=" w-[80%] m-auto py-11 ">
+            <CarouselContainer slides={slides}></CarouselContainer>
+          </div>
         }
         header="A little more about me"
         paragraphs={[
