@@ -23,7 +23,7 @@ const Project: React.FC<Project> = ({
 }) => {
   const router = useRouter();
   const back = (
-    <div className="h-full w-full grid grid-cols-4 gap-2">
+    <div className="h-full w-full grid grid-cols-4 gap-2 bg-zinc-600">
       {languages.map((language: string) => {
         return (
           <div

@@ -6,7 +6,7 @@ const ContactForm: React.FC = () => {
   const [email, setEmail] = useState("");
 
   return (
-    <div className="flex w-full justify-center mt-12 font-poppins ">
+    <div className="flex w-full justify-center my-12 font-poppins ">
       <div className="bg-zinc-600 w-[45%] text-gray-300 p-10 rounded-md">
         <form id="contactForm" method="POST" name={"formName"}>
           <input type="hidden" name="form-name" value={"formName"} />

@@ -19,12 +19,13 @@ const projects = [
       "css",
       "gmail",
       "html",
-      "js",
+      "javascript",
       "nextjs",
       "postgres",
       "react",
       "sqlite",
       "twilio",
+      "vercel",
     ],
   },
   {
@@ -35,7 +36,7 @@ const projects = [
       "This project was built for a client of a Calgary based cleaning site. It is hosted on netlify, and is not optimized for SEO.",
     repo: "https://github.com/Daver067/cleaning-site",
     website: "https://moveoutcleanerscalgary.ca",
-    languages: ["html", "sass", "react", "js"],
+    languages: ["html", "sass", "react", "javascript"],
   },
   {
     name: "Solitaire",
@@ -45,16 +46,16 @@ const projects = [
       "This project was my first collaborative effort. Solitaire was built to learn how to use git with another developer, along with learning how to combine skills and styles with another developer. This was built with vanilla JS.",
     repo: "https://github.com/Daver067/card-games",
     website: "https://daver067.github.io/card-games/",
-    languages: ["html", "css", "js", "webpack"],
+    languages: ["html", "css", "javascript", "webpack"],
   },
   {
     name: "Personal Site",
     route: "/personalsite",
     img: personal,
-    description: "This site was built by me! I used NextJS, TailwindCSS ",
+    description: "This site was built by me! I used NextJS and TailwindCSS. ",
     repo: "  https://github.com/Daver067/daves-website",
     website: "https://google.com",
-    languages: ["html", "css", "tailwind", "js", "nextjs"],
+    languages: ["html", "css", "tailwind", "javascript", "nextjs"],
   },
 ];
 
