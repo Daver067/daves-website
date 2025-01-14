@@ -19,9 +19,9 @@ const NavbarItem: React.FC<NavbarItem> = ({
   }
   if (usePathname() === linkRoute) {
     return (
-      <li className="my-4 ps-2 lg:my-0 lg:pe-1 lg:ps-2">
+      <li className="mb-4 ps-2 lg:mb-0 lg:pe-1 lg:ps-0">
         <Link
-          className="text-black dark:text-white lg:px-2"
+          className="p-0 text-black dark:text-white lg:px-2"
           aria-current="page"
           href={linkRoute}
         >
