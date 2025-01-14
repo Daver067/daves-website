@@ -26,7 +26,10 @@ const Project: React.FC<Project> = ({
     <div className="h-full w-full grid grid-cols-4 gap-2">
       {languages.map((language: string) => {
         return (
-          <div className="flex align-middle items-center justify-center">
+          <div
+            key={language}
+            className="flex align-middle items-center justify-center"
+          >
             {languagepics[language as keyof typeof languagepics]}
           </div>
         );

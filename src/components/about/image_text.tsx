@@ -15,9 +15,12 @@ const Image_And_Text: React.FC<Image_And_Text> = ({
         <h1 className="block text-2xl text-center underline decoration-1 underline-offset-4 pb-4">
           {header}
         </h1>
-        {paragraphs.map((p) => {
+        {paragraphs.map((p, i) => {
           return (
-            <p className="relative leading-6 text-center md:text-left p-2 text-base ">
+            <p
+              key={i}
+              className="relative leading-6 text-center md:text-left p-2 text-base "
+            >
               {p}
             </p>
           );

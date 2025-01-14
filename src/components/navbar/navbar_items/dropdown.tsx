@@ -60,7 +60,13 @@ const DropDown: React.FC<DropDown> = ({ children, dropDownName }) => {
             className="absolute z-[1000] hidden float-left pt-5 m-0 min-w-max list-none overflow-hidden rounded-lg border-none bg-tertiary-color bg-clip-padding text-left text-base shadow-lg data-[twe-dropdown-show]:block "
           >
             {children.map((item) => {
-              return <DropDownItem name={item.name} route={item.route} />;
+              return (
+                <DropDownItem
+                  key={item.name}
+                  name={item.name}
+                  route={item.route}
+                />
+              );
             })}
           </ul>
         </div>

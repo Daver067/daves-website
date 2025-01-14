@@ -12,7 +12,9 @@ const ProjectsList = () => {
       {projects.map((project) => {
         return (
           <Project
+            key={project.name}
             name={project.name}
+            route={project.route}
             img={project.img}
             description={project.description}
             repo={project.repo}

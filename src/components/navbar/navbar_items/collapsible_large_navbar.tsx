@@ -20,11 +20,16 @@ const CollapsibleMenu: React.FC<CollapsibleMenu> = ({ children }) => {
           if (item.type === "drop-down") {
             if (item.children === undefined) return;
             return (
-              <DropDown dropDownName={item.name} children={item.children} />
+              <DropDown
+                key={item.name}
+                dropDownName={item.name}
+                children={item.children}
+              />
             );
           } else
             return (
               <NavbarItem
+                key={item.name}
                 linkName={item.name}
                 linkRoute={item.route}
                 type={item.type}

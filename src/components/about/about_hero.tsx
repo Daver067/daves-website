@@ -53,7 +53,9 @@ const HeroAbout = () => {
           <div className="text-2xl pb-10 text-center">Some of my skills</div>
           <div className="flex flex-wrap gap-10">
             {Object.entries(languagespics).map(([key, value], index) => {
-              return <Tooltip text={key} children={value}></Tooltip>;
+              return (
+                <Tooltip key={index} text={key} children={value}></Tooltip>
+              );
             })}
           </div>
         </div>
