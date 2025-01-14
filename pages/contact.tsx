@@ -1,3 +1,5 @@
+import ContactForm from "@/src/components/contact/contact_form";
+import ContactHero from "@/src/components/contact/contact_hero";
 import PageNav from "@/src/components/navbar/Page_NavBar";
 import { Inter } from "next/font/google";
 
@@ -7,6 +9,9 @@ export default function Contact() {
   return (
     <div>
       <PageNav />
+      <ContactHero />
+
+      <ContactForm />
     </div>
   );
 }
