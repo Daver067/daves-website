@@ -21,11 +21,11 @@ const HeroAbout = () => {
       </div>
       <div className="w-full flex justify-center gap-10 bg-zinc-800 flex-col py-10 md:flex-row">
         <div className=" w-[80%] m-auto px-5 text-base md:px-10 md:w-[40%]">
-          <div className="text-2xl pb-8 text-center">Hey I'm Dave!</div>
+          <div className="text-2xl pb-8 text-center">Hey I{`&#39`}m Dave!</div>
           <div className=" tracking-wide">
             <p className="pb-4">
-              I'm a self taught web developer from Alberta, Canada where I also
-              work full time as a licensed Electrician.
+              I{`&#39`}m a self taught web developer from Alberta, Canada where
+              I also work full time as a licensed Electrician.
             </p>
             <p className="pb-4">
               I began my programming journey following{" "}
@@ -33,7 +33,7 @@ const HeroAbout = () => {
                 className="text-blue-500 hover:text-blue-700 hover:underline transition duration-200 ease-in-out"
                 href="https://www.theodinproject.com"
               >
-                The Odin Project's
+                The Odin Project{`&#39`}s
               </a>{" "}
               Full Stack JavaScript Course.
             </p>
@@ -54,7 +54,9 @@ const HeroAbout = () => {
           <div className="flex flex-wrap gap-10">
             {Object.entries(languagespics).map(([key, value], index) => {
               return (
-                <Tooltip key={index} text={key} children={value}></Tooltip>
+                <Tooltip key={index} text={key}>
+                  {value}
+                </Tooltip>
               );
             })}
           </div>

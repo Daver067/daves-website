@@ -2,13 +2,13 @@ import DropDownItem from "./dropdown_item";
 import { v4 as uuidv4 } from "uuid";
 interface DropDown {
   dropDownName: string;
-  children: {
+  childrenString: {
     route: string;
     name: string;
     type?: "disabled";
   }[];
 }
-const DropDown: React.FC<DropDown> = ({ children, dropDownName }) => {
+const DropDown: React.FC<DropDown> = ({ childrenString, dropDownName }) => {
   const ulID = dropDownName;
 
   const openDropDown = () => {
@@ -59,7 +59,7 @@ const DropDown: React.FC<DropDown> = ({ children, dropDownName }) => {
             id={ulID}
             className="absolute z-[1000] hidden float-left pt-5 m-0 min-w-max list-none overflow-hidden rounded-lg border-none bg-tertiary-color bg-clip-padding text-left text-base shadow-lg data-[twe-dropdown-show]:block "
           >
-            {children.map((item) => {
+            {childrenString.map((item) => {
               return (
                 <DropDownItem
                   key={item.name}

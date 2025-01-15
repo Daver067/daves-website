@@ -4,14 +4,14 @@ import Link from "next/link";
 import { useRouter } from "next/router";
 
 interface HamburgerMenu {
-  children: {
+  childrenString: {
     name: string;
     route: string;
     type?: "drop-down" | "disabled" | "link";
   }[];
 }
 
-const HamburgerMenu: React.FC<HamburgerMenu> = ({ children }) => {
+const HamburgerMenu: React.FC<HamburgerMenu> = ({ childrenString }) => {
   const [isOpen, setIsOpen] = useState(false);
   const ref = useRef<HTMLDivElement>(null);
   const router = useRouter();
@@ -73,10 +73,11 @@ const HamburgerMenu: React.FC<HamburgerMenu> = ({ children }) => {
             ref={ref}
             onClick={(e) => e.stopPropagation()}
           >
-            {children.map((item) => {
+            {childrenString.map((item) => {
               if (item.type === "link") {
                 return (
                   <div
+                    key={item.name}
                     className="block text-white text-2xl mb-4 hover:text-gray-300 cursor-pointer p-2 rounded-lg"
                     onClick={() => handleNavigation(item.route)}
                   >
@@ -86,6 +87,7 @@ const HamburgerMenu: React.FC<HamburgerMenu> = ({ children }) => {
               } else if (item.type === "drop-down") {
                 return (
                   <div
+                    key={item.name}
                     className="block text-white text-2xl mb-4 hover:text-gray-300 cursor-pointer p-2 rounded-lg"
                     onClick={() => handleNavigation(item.route)}
                   >
@@ -94,7 +96,10 @@ const HamburgerMenu: React.FC<HamburgerMenu> = ({ children }) => {
                 );
               } else if (item.type === "disabled") {
                 return (
-                  <div className="block text-grey text-2xl mb-4 p-2 rounded-lg">
+                  <div
+                    key={item.name}
+                    className="block text-grey text-2xl mb-4 p-2 rounded-lg"
+                  >
                     {item.name}
                   </div>
                 );

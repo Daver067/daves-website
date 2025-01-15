@@ -5,13 +5,13 @@ const PageNav: React.FC = () => {
   return (
     <TopNav
       title="Dave's Page"
-      children={[
+      childrenString={[
         { name: "Home", route: "/", type: "link" },
         {
           name: "My Projects",
           route: "#",
           type: "drop-down",
-          children: projects.map((project) => {
+          childrenString: projects.map((project) => {
             return { name: project.name, route: project.route };
           }),
         },

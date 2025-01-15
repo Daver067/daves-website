@@ -5,19 +5,14 @@ import { usePathname } from "next/navigation";
 interface NavbarItem {
   linkName: string;
   linkRoute: string;
-  selected?: boolean;
   type?: "drop-down" | "disabled" | "link";
 }
-const NavbarItem: React.FC<NavbarItem> = ({
-  linkName,
-  linkRoute,
-  selected = false,
-  type,
-}) => {
+const NavbarItem: React.FC<NavbarItem> = ({ linkName, linkRoute, type }) => {
+  const pathname = usePathname();
   if (type === "disabled") {
     return <DisabledLink linkName={linkName} />;
   }
-  if (usePathname() === linkRoute) {
+  if (pathname === linkRoute) {
     return (
       <li className="mb-4 ps-2 lg:mb-0 lg:pe-1 lg:ps-0">
         <Link
