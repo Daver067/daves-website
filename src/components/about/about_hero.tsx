@@ -19,8 +19,8 @@ const HeroAbout = () => {
       <div className="w-full text-center text-4xl py-20 underline decoration-1 underline-offset-4">
         About Me
       </div>
-      <div className="w-full flex justify-center gap-10 bg-zinc-800 flex-col py-10 md:flex-row">
-        <div className=" w-[80%] m-auto px-5 text-base md:px-10 md:w-[40%]">
+      <div className="w-full flex justify-center bg-zinc-800 flex-col py-10 px-10 md:flex-row">
+        <div className=" w-[80%] m-auto pl-5 text-base md:pl-10 md:w-[40%] mb-10 md:mb-auto">
           <div className="text-2xl pb-8 text-center">Hey I{`'`}m Dave!</div>
           <div className=" tracking-wide">
             <p className="pb-4">
@@ -49,9 +49,9 @@ const HeroAbout = () => {
             </p>
           </div>
         </div>
-        <div className="text-lg m-auto px-5 w-[80%] md:px-10 md:w-[40%] ">
+        <div className="text-lg m-auto pr-5 w-[80%] md:pr-10 md:w-[40%] ">
           <div className="text-2xl pb-10 text-center">Some of my skills</div>
-          <div className="flex flex-wrap gap-10">
+          <div className="flex flex-wrap gap-10 justify-around">
             {Object.entries(languagespics).map(([key, value], index) => {
               return (
                 <Tooltip key={index} text={key}>
