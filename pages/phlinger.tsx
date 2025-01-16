@@ -7,6 +7,13 @@ export default function Phlinger() {
   return (
     <div>
       <PageNav />
+      <iframe
+        className="w-[50%] aspect-video self-stretch md:min-h-96"
+        src="https://www.youtube.com/embed/SR2PQSKpWY4"
+        frameBorder="0"
+        title="Product Overview Video"
+        aria-hidden="true"
+      />{" "}
     </div>
   );
 }
