@@ -10,7 +10,7 @@ const projects = [
     img: phlingerPhoto,
     description:
       "Phone Phlinger is a tool used to make the Twilio interface more user friendly. Twilio is a cloud communication platform used by many organizations for phone, text, and email communications. Phone Phlinger enables easy use of Call-Forwarding, Voicemail, Whisper Messages, Caller Greeting Messages, Call Recording, and Call Tracking for all of your Twilio phone numbers. My app also includes email followups upon ending an active phone call which includes the call recording (if available) and basic call information on all calls to your Twilio Phone Numbers. A Twilio account is required. Sorry, the Repo is currently on private, please contact me for a chance to view the Repo. The site is also only in early Alpha testing with one active client using the service.",
-    repo: "https://www.google.com",
+    repo: "https://daves-website-theta.vercel.app/contact",
     website: "https://phlinger-frontend-paste.vercel.app",
     languages: [
       "python",
@@ -54,7 +54,7 @@ const projects = [
     img: personal,
     description: "This site was built by me! I used NextJS and TailwindCSS. ",
     repo: "  https://github.com/Daver067/daves-website",
-    website: "https://google.com",
+    website: "https://daves-website-theta.vercel.app",
     languages: ["html", "css", "tailwind", "javascript", "nextjs", "vercel"],
   },
 ];
