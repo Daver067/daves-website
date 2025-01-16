@@ -6,16 +6,16 @@ const ContactForm: React.FC = () => {
   const [email, setEmail] = useState("");
 
   return (
-    <div className="flex w-full justify-center my-12 font-poppins ">
-      <div className="bg-zinc-600 w-[90%] md:w-[45%] text-gray-300 p-5 md:p-10 rounded-md">
+    <div className="flex w-full justify-center my-4 md:my-12 font-poppins ">
+      <div className="bg-zinc-600 w-[90%] md:w-[20%] text-gray-300 p-5 md:p-5 rounded-md">
         <form id="contactForm" method="POST" name={"formName"}>
           <input type="hidden" name="form-name" value={"formName"} />
-          <div className="flex flex-col mb-6 md:mb-12">
+          <div className="flex flex-col mb-6 md:mb-6">
             <label className="mb-4" htmlFor="name">
               Name:
             </label>
             <input
-              className="h-8 md:h-16 pl-4 rounded-xl text-slate-800 bg-gray-200"
+              className="h-8 md:h-8 pl-4 rounded-xl text-slate-800 bg-gray-200"
               placeholder="Your name here"
               type="text"
               id="name"
@@ -26,12 +26,12 @@ const ContactForm: React.FC = () => {
               }}
             ></input>
           </div>
-          <div className="flex flex-col mb-6 md:mb-12">
+          <div className="flex flex-col mb-6 md:mb-6">
             <label className="mb-4" htmlFor="email">
               Email:{" "}
             </label>
             <input
-              className="h-8 md:h-16 pl-4 rounded-xl text-slate-800 bg-gray-200"
+              className="h-8 md:h-8 pl-4 rounded-xl text-slate-800 bg-gray-200"
               placeholder="Your email here"
               type="text"
               id="email"
@@ -42,12 +42,12 @@ const ContactForm: React.FC = () => {
               }}
             ></input>
           </div>
-          <div className="flex flex-col mb-6 md:mb-12">
+          <div className="flex flex-col mb-6 md:mb-6">
             <label className="mb-4" htmlFor="message">
               Message:
             </label>
             <textarea
-              className=" h-36 md:h-72 px-4 py-2 rounded-xl text-slate-800 bg-gray-200"
+              className=" h-36 md:h-36 px-4 py-2 rounded-xl text-slate-800 bg-gray-200"
               placeholder="Leave me a message!"
               id="message"
               name="message"
