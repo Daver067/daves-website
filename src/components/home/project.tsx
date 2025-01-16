@@ -45,21 +45,21 @@ const Project: React.FC<Project> = ({
 
   return (
     <div className="w-full lg:px-60 pb-3 border-b-2 border-zinc-500">
-      <div className="h-full pt-4 px-4 mx-auto flex flex-col md:flex-row min-h-64 md:gap-20 items-center ">
-        <div className="w-[90%] h-80 md:w-[30%] relative my-2">
+      <div className="h-full pt-4 px-4 mx-auto flex flex-col-reverse md:flex-row min-h-64 md:gap-20 items-center ">
+        <div className="w-[90%] h-80 md:w-[30%] relative my-2 ">
           <Flippable front={front} back={back} />
         </div>
         <div className=" w-full md:w-[70%] text-center flex flex-col text-gray-300 ">
           <a id={route}>
             <h1
               id={route}
-              className="mb-4 text-4xl font-bold leading-tight font-pj"
+              className="mb-4 text-2xl md:text-4xl font-bold leading-tight font-poppins"
             >
               {name}
             </h1>
           </a>
 
-          <p className="m-auto px-6 text-lg text-left font-inter">
+          <p className="m-auto px-6 text-s md:text-lg text-left font-poppins">
             {description}
           </p>
           <div className=" flex justify-evenly pt-4 mb-2">

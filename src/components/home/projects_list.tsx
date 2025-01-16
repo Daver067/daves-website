@@ -5,7 +5,7 @@ const ProjectsList = () => {
   return (
     <div className=" ">
       <div className=" border-b-2 border-zinc-500 py-5 lg:pl-8">
-        <h1 className="text-gray-400 mx-24 text-xl font-bold leading-tight lg:text-3xl font-poppins">
+        <h1 className="text-gray-400 mx-24 text-xl font-bold leading-tight md:text-3xl font-poppins md:pl-48">
           Projects I have built:
         </h1>
       </div>
