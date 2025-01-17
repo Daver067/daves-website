@@ -7,7 +7,7 @@ const ContactForm: React.FC = () => {
 
   return (
     <div className="flex w-full justify-center my-4 md:my-12 font-poppins ">
-      <div className="bg-zinc-600 w-[90%] md:w-[25%] text-gray-300 p-5 md:p-5 rounded-md">
+      <div className="bg-zinc-600 w-[60%] md:w-[25%] text-gray-300 p-5 md:p-5 rounded-md">
         <form id="contactForm" method="POST" name={"formName"}>
           <input type="hidden" name="form-name" value={"formName"} />
           <div className="flex flex-col mb-6 md:mb-6">
