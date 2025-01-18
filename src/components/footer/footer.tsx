@@ -10,38 +10,50 @@ const Footer: React.FC<Footer> = ({}) => {
   const router = useRouter();
 
   return (
-    <div className=" mt-10 bg-tertiary-color min-h-[10vh] w-full p-5 font-poppins">
+    <div className=" mt-10 bg-tertiary-color min-h-[10vh] w-full p-5 font-poppins ">
       <div className="flex justify-center">
         <div className="">
-          <h3 className="text-center">Socials</h3>
-          <div className="flex">
-            <div className="flex flex-col">
-              <a href="https://www.facebook.com/dave.diemert" className="">
-                <div className="flex gap-4 ">
-                  <FaFacebook className="m-auto" />
-                  Facebook
+          <h3 className="text-center text-xl mb-3 underline decoration-1 underline-offset-4 ">
+            Socials
+          </h3>
+          <div className="flex  gap-10">
+            <div className="flex flex-col gap-2">
+              <a
+                href="https://www.facebook.com/dave.diemert"
+                className="hover:text-text-color-hovering"
+              >
+                <div className="flex  ">
+                  <FaFacebook className="my-auto" />
+                  <h3 className="pl-3">Facebook</h3>
                 </div>
               </a>
-              <a href="https://www.instagram.com/davediemert/" className="">
-                <div className="flex gap-4 ">
-                  <FaInstagram className="m-auto" /> Instagram
+              <a
+                href="https://www.instagram.com/davediemert/"
+                className="hover:text-text-color-hovering"
+              >
+                <div className="flex">
+                  <FaInstagram className="my-auto" />
+                  <h3 className="pl-3">Instagram</h3>
                 </div>
               </a>
             </div>
-            <div className="flex flex-col">
+            <div className="flex flex-col gap-2">
               <a
                 href="https://www.linkedin.com/in/dave-diemert-a47135306/"
-                className=""
+                className="hover:text-text-color-hovering"
               >
-                <div className="flex gap-4 ">
-                  <FaLinkedin className="m-auto" />
-                  LinkedIn
+                <div className="flex ">
+                  <FaLinkedin className="my-auto" />
+                  <h3 className="pl-3">LinkedIn</h3>
                 </div>
               </a>
-              <a href="https://github.com/Daver067" className="">
-                <div className="flex gap-4 ">
-                  <FaGithub className="m-auto" />
-                  Github
+              <a
+                href="https://github.com/Daver067"
+                className="hover:text-text-color-hovering"
+              >
+                <div className="flex">
+                  <FaGithub className="my-auto" />
+                  <h3 className="pl-3">Github</h3>
                 </div>
               </a>
             </div>

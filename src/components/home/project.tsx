@@ -44,7 +44,7 @@ const Project: React.FC<Project> = ({
   );
 
   return (
-    <div className="w-full lg:px-60 pb-3 border-b-2 border-zinc-500">
+    <div className="w-full lg:px-60 pb-3 border-t-2 border-zinc-500">
       <div className="h-full pt-4 px-4 mx-auto flex flex-col-reverse md:flex-row min-h-64 md:gap-20 xs-items-center ">
         <div className="w-[90%] h-80 md:w-[30%] relative my-2 self-center ">
           <Flippable front={front} back={back} />

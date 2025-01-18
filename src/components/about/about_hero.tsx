@@ -14,7 +14,7 @@ const HeroAbout = () => {
   ];
   return (
     <div className="h-full w w-full bg-black font-poppins">
-      <div className="w-full text-center text-4xl pt-20 pb-5 md:pb-20 underline decoration-1 underline-offset-4">
+      <div className="w-full text-center text-4xl pt-5 md:pt-10 pb-5 md:pb-10 underline decoration-1 underline-offset-4">
         About Me
       </div>
       <div className="w-full flex justify-center bg-zinc-800 flex-col py-10 px:2 md:px-32 md:flex-row">
