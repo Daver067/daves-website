@@ -25,7 +25,7 @@ export default function Mocc() {
       </div>
       <div className="px-10 md:px-64 mb-20">
         <h3 className="block text-2xl text-center underline decoration-1 underline-offset-4 pb-4">
-          Where's It Hosted?
+          Where{"'"}s It Hosted?
         </h3>
         <p className="relative leading-6 text-left p-2 text-base font-poppins">
           The cleaning site is hosted on netlify, taking advantage of the free
@@ -41,14 +41,14 @@ export default function Mocc() {
           What Were The Biggest Hurdles?
         </h3>
         <p className="relative leading-6 text-left p-2 text-base font-poppins">
-          Through most of my projects in The Odin Project I'll admit I kind of
-          brushed off the CSS, on the mentality of "as long as it works who
-          cares what it looks like". Well, that put me at a disadvantage when it
-          came to building this site... I was unfamiliar with responsive design,
-          having built nothing meant for phones. Overall, I am happy with the
-          outcome, looking at it now I see some improvements I could have made
-          for better visual appeal, but it's just a step in my learning
-          adventure.
+          Through most of my projects in The Odin Project I{"'"}ll admit I kind
+          of brushed off the CSS, on the mentality of {'"'}as long as it works
+          who cares what it looks like{'"'}. Well, that put me at a disadvantage
+          when it came to building this site... I was unfamiliar with responsive
+          design, having built nothing meant for phones. Overall, I am happy
+          with the outcome, looking at it now I see some improvements I could
+          have made for better visual appeal, but it{"'"}s just a step in my
+          learning adventure.
         </p>
       </div>
       <div className=" flex justify-evenly pt-4 mb-2">

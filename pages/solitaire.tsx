@@ -55,7 +55,7 @@ export default function Solitaire() {
         </h3>
         <p className="relative leading-6 text-left p-2 text-base font-poppins">
           Yes! The other developer and I are actually considering making a npm
-          package for handling cards. It's still in early stages, but we are
+          package for handling cards. It{"'"}s still in early stages, but we are
           optimistic!
         </p>
       </div>

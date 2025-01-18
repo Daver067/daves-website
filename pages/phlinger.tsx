@@ -2,6 +2,7 @@ import { Inter } from "next/font/google";
 import PageNav from "@/src/components/navbar/Page_NavBar";
 import { useRouter } from "next/navigation";
 import Footer from "@/src/components/footer/footer";
+import Link from "next/link";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -57,33 +58,35 @@ export default function Phlinger() {
           How Does It Work?
         </h3>
         <p className="relative leading-6 text-left p-2 text-base font-poppins">
-          Well, that's a secret! Actually, it's just a little convuluted to
-          maintain it's 0$ spending limit. Phone Phlinger has taken on many
-          shapes, from a simple flask backend, to hosted on amazon ec2 (turns
-          out thats not free), to what it is today! I built this for my fiance,
-          who was annoyed at paying the pricetag of other similar software.
+          Well, that{"'"}s a secret! Actually, it{"'"}s just a little convuluted
+          to maintain it{"'"}s 0$ spending limit. Phone Phlinger has taken on
+          many shapes, from a simple flask backend, to hosted on amazon ec2
+          (turns out thats not free), to what it is today! I built this for my
+          fiance, who was annoyed at paying the pricetag of other similar
+          software.
         </p>
 
         <p className="relative leading-6 text-left p-2 text-base font-poppins">
-          The front end is built with NextJS, using twilio's paste package for a
-          lot of designs, the site is hosted on vercel. There is a Postgres
-          Database which handles user information, accessed with prisma. Login
-          information is handled by auth0. All phone logic is handled by twilio
-          serverless functions, which are uploaded to users twilio accounts from
-          a python backend hosted on pythonanywhere by running a bash script
-          accessing the twilio command line interface tool. User recordings (for
-          voicemails, caller greetings, whisper messages) are stored in an
-          amazon s3 bucket, as per twilio documentation. Updating information on
-          the webpage Phone Phlinger edits JSON data saved on users specific
-          twilio sync accounts. The emails are from the gmail API, also accessed
-          through the python backend.
+          The front end is built with NextJS, using twilio{"'"}s paste package
+          for a lot of designs, the site is hosted on vercel. There is a
+          Postgres Database which handles user information, accessed with
+          prisma. Login information is handled by auth0. All phone logic is
+          handled by twilio serverless functions, which are uploaded to users
+          twilio accounts from a python backend hosted on pythonanywhere by
+          running a bash script accessing the twilio command line interface
+          tool. User recordings (for voicemails, caller greetings, whisper
+          messages) are stored in an amazon s3 bucket, as per twilio
+          documentation. Updating information on the webpage Phone Phlinger
+          edits JSON data saved on users specific twilio sync accounts. The
+          emails are from the gmail API, also accessed through the python
+          backend.
         </p>
         <p className="relative leading-6 text-left p-2 text-base font-poppins">
-          I understand that was a bit of a mouthful, but I'm happy to talk about
-          anything more in depth, just get in{" "}
-          <a className=" underline " href="/contact">
+          I understand that was a bit of a mouthful, but I{"'"}m happy to talk
+          about anything more in depth, just get in{" "}
+          <Link className=" underline " href="/contact">
             contact
-          </a>{" "}
+          </Link>{" "}
           with me!
         </p>
       </div>

@@ -28,7 +28,8 @@ export default function PersonalSite() {
         </h3>
         <p className="relative leading-6 text-left p-2 text-base font-poppins">
           I wanted somewhere to be able to show off all of my cool projects!
-          Maybe it will convince you to hire me, maybe it'll do the opposite!
+          Maybe it will convince you to hire me, maybe it{"'"}ll do the
+          opposite!
         </p>
       </div>
       <div className="px-10 md:px-64 mb-20">
@@ -36,7 +37,7 @@ export default function PersonalSite() {
           Any Further Plans With This Project?
         </h3>
         <p className="relative leading-6 text-left p-2 text-base font-poppins">
-          I'm going to keep updating this site as I build more cool things!
+          I{"'"}m going to keep updating this site as I build more cool things!
         </p>
       </div>
       <div className=" flex justify-evenly pt-4 mb-2">
