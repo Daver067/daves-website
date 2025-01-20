@@ -12,7 +12,7 @@ const PageNav: React.FC = () => {
           route: "#",
           type: "drop-down",
           childrenString: projects.map((project) => {
-            return { name: project.name, route: project.route };
+            return { name: project.name, route: project.route, type: "link" };
           }),
         },
         { name: "About Me", route: "/about", type: "link" },

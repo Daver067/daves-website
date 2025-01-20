@@ -5,7 +5,7 @@ import { usePathname } from "next/navigation";
 interface NavbarItem {
   linkName: string;
   linkRoute: string;
-  type?: "drop-down" | "disabled" | "link";
+  type: "drop-down" | "disabled" | "link";
 }
 const NavbarItem: React.FC<NavbarItem> = ({ linkName, linkRoute, type }) => {
   const pathname = usePathname();

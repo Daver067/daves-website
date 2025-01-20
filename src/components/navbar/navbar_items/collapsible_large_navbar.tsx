@@ -5,8 +5,12 @@ interface CollapsibleMenu {
   childrenString: {
     name: string;
     route: string;
-    type?: "drop-down" | "disabled" | "link";
-    childrenString?: { name: string; route: string; type?: "disabled" }[];
+    type: "drop-down" | "disabled" | "link";
+    childrenString?: {
+      name: string;
+      route: string;
+      type: "disabled" | "drop-down" | "link";
+    }[];
   }[];
 }
 const CollapsibleMenu: React.FC<CollapsibleMenu> = ({ childrenString }) => {

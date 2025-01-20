@@ -1,13 +1,13 @@
 import DropDownItem from "./dropdown_item";
-import { v4 as uuidv4 } from "uuid";
 interface DropDown {
   dropDownName: string;
   childrenString: {
-    route: string;
     name: string;
-    type?: "disabled";
+    route: string;
+    type: "disabled" | "drop-down" | "link";
   }[];
 }
+
 const DropDown: React.FC<DropDown> = ({ childrenString, dropDownName }) => {
   const ulID = dropDownName;
 
