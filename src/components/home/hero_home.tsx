@@ -19,7 +19,9 @@ const HeroHome = () => {
             <Image
               src={daverPhoto}
               className="lg:w-60 rounded-full w-44 m-auto pt-10 md:pt-0"
-              alt="Avatar"
+              alt="Photo of me (Dave) drinking coffee"
+              width={480}
+              height={640}
             />
           </div>
         </section>

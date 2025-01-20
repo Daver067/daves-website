@@ -12,9 +12,9 @@ export default function Phlinger() {
   return (
     <div className=" min-h-screen flex flex-col ">
       <PageNav />
-      <div className="w-full text-center text-4xl pt-20 pb-5 md:pb-20 underline decoration-1 underline-offset-4">
+      <h2 className="w-full text-center text-4xl pt-20 pb-5 md:pb-20 underline decoration-1 underline-offset-4">
         Phone Phlinger
-      </div>
+      </h2>
       <div className="px-10 md:px-64 mb-20">
         <h3 className="block text-2xl text-center underline decoration-1 underline-offset-4 pb-4">
           What Is It?
