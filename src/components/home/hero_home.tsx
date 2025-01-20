@@ -9,12 +9,12 @@ const HeroHome = () => {
         <section className="pt-12  sm:pt-16">
           <div className="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8 flex-col flex md:flex-row gap-10  ">
             <div className="max-w-2xl mx-auto text-center m-auto ">
-              <h1 className="px-6 text-lg text-gray-300 font-inter">
+              <h3 className="px-6 text-lg text-gray-300 font-inter">
                 Passionate, Dedicated, Innovative, Resourceful, Self-Motivated
-              </h1>
-              <p className="mt-5 text-4xl font-bold leading-tight text-gray-100 sm:leading-tight sm:text-5xl lg:text-6xl lg:leading-tight font-pj">
+              </h3>
+              <h2 className="mt-5 text-4xl font-bold leading-tight text-gray-100 sm:leading-tight sm:text-5xl lg:text-6xl lg:leading-tight font-pj">
                 The software developer that will meet your needs
-              </p>
+              </h2>
             </div>
             <Image
               src={daverPhoto}

@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import { useRouter } from "next/navigation";
 import { FaFacebook } from "react-icons/fa";
 import { FaInstagram } from "react-icons/fa";
 import { FaLinkedin } from "react-icons/fa";
@@ -7,8 +6,6 @@ import { FaGithub } from "react-icons/fa";
 
 interface Footer {}
 const Footer: React.FC<Footer> = ({}) => {
-  const router = useRouter();
-
   return (
     <div className=" mt-10 bg-tertiary-color min-h-[10vh] w-full p-5 font-poppins ">
       <div className="flex justify-center">

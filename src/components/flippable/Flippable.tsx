@@ -25,7 +25,7 @@ const Flippable: React.FC<Flippable> = ({ front, back }) => {
       <div
         className={` top-0 left-0 bottom-0 right-0 absolute flex items-center `}
         style={{
-          transition: "transform 2s ease",
+          transition: "transform 1s ease",
           backfaceVisibility: "hidden",
           transform: ` perspective(1000px) rotateY(${
             flipped ? "0deg" : "-180deg"
@@ -37,7 +37,7 @@ const Flippable: React.FC<Flippable> = ({ front, back }) => {
       <div
         className={` back top-0 left-0 bottom-0 right-0 absolute flex items-center`}
         style={{
-          transition: "transform 2s ease",
+          transition: "transform 1s ease",
           backfaceVisibility: "hidden",
           transform: `perspective(1000px) rotateY(${
             flipped ? "180deg" : "0deg"
