@@ -1,15 +1,66 @@
-import { useState } from "react";
+import verifyForm from "@/pages/api/verifyForm";
+import { ButtonHTMLAttributes, useState } from "react";
 
 const ContactForm: React.FC = () => {
   const [textareaContent, setTextareaContent] = useState("");
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
+  const [error, setError] = useState<string[]>([]);
+
+  const handleSubmit = async (event: React.MouseEvent<HTMLButtonElement>) => {
+    event.preventDefault();
+    setError([]);
+    try {
+      const formValid = verifyForm({
+        name,
+        email,
+        message: textareaContent,
+      });
+      if (formValid !== true) {
+        const problems = [];
+        for (const num in formValid.list) {
+          problems.push(formValid.list[num]);
+        }
+        setError(problems);
+        throw formValid;
+      }
+    } catch (error) {
+      console.log(error);
+      return;
+    }
+    const req = { name: name, email: email, message: textareaContent };
+
+    try {
+      let response = await fetch("/api/submit", {
+        method: "POST",
+        body: JSON.stringify(req),
+      });
+      if (response.status !== 200) {
+        response = await response.json();
+        throw response;
+      }
+      response = await response.json();
+      console.log(response);
+    } catch (error) {
+      // Handle error
+      console.error("Error submitting form:", error);
+    }
+  };
 
   return (
     <div className="flex w-full justify-center my-4 md:my-12 font-poppins ">
       <div className="bg-zinc-600 w-[75%] md:w-[25%] text-gray-300 p-5 md:p-5 rounded-md">
-        <form id="contactForm" method="POST" name={"formName"}>
+        <form id="contactForm">
           <input type="hidden" name="form-name" value={"formName"} />
+          <div className="">
+            {error.map((err) => {
+              return (
+                <div key={err} className="text-red-300">
+                  {err}
+                </div>
+              );
+            })}
+          </div>
           <div className="flex flex-col mb-6 md:mb-6">
             <label className="mb-4" htmlFor="name">
               Name:
@@ -58,10 +109,7 @@ const ContactForm: React.FC = () => {
           <div className="flex justify-end">
             <button
               onClick={(e) => {
-                e.preventDefault();
-                console.log(name);
-                console.log(email);
-                console.log(textareaContent);
+                handleSubmit(e);
               }}
               className="text-gray-200 bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-8 py-2.5 me-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800"
             >
