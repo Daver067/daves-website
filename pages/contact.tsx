@@ -8,13 +8,15 @@ const inter = Inter({ subsets: ["latin"] });
 
 export default function Contact() {
   return (
-    <div className="min-h-screen flex flex-col justify-between">
+    <div className="min-h-screen flex flex-col ">
       <PageNav />
-      <div className="">
+      <div className="mb-auto">
         <ContactHero />
         <ContactForm />
       </div>
-      <Footer />
+      <div className="">
+        <Footer />
+      </div>
     </div>
   );
 }
