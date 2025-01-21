@@ -69,6 +69,8 @@ const ContactForm: React.FC = () => {
                     className="h-12 w-12 rounded-full border-4 border-white object-cover"
                     src={daverPhoto}
                     alt="Daver Pic"
+                    height={12}
+                    width={12}
                   />
                   <div className="ml-4 w-56">
                     <p className="text-xs font-medium text-gray-300">From</p>
