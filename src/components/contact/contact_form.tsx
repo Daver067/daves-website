@@ -62,7 +62,7 @@ const ContactForm: React.FC = () => {
                   Thank You!
                 </h2>
                 <p className="mb-8 font-normal sm:font-medium text-gray-500">
-                  I'll reach out as soon as possible
+                  I{"'"}ll reach out as soon as possible
                 </p>
                 <div className="flex items-center rounded-xl bg-zinc-600 p-4">
                   <Image
