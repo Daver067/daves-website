@@ -23,7 +23,7 @@ const Image_And_Text: React.FC<Image_And_Text> = ({
           );
         })}
       </div>
-      <div className=" w-[80%] md:w-[45%] h-full my-2 mr-1 self-center">
+      <div className=" w-[80%] md:w-[45%] h-[full] my-2 mr-1 self-center">
         {img}
       </div>
     </div>

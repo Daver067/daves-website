@@ -51,12 +51,12 @@ const Project: React.FC<Project> = ({
         </div>
         <div className=" w-full md:w-[70%] text-center flex flex-col text-gray-300 ">
           <a id={route}>
-            <h3
+            <h4
               id={route}
               className="mb-4 text-2xl md:text-4xl font-bold leading-tight font-poppins pt-4"
             >
               {name}
-            </h3>
+            </h4>
           </a>
 
           <p className="m-auto px-6 text-s md:text-lg text-left font-poppins">
