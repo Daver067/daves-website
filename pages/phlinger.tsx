@@ -2,7 +2,6 @@ import { Inter } from "next/font/google";
 import PageNav from "@/src/components/navbar/Page_NavBar";
 import { useRouter } from "next/navigation";
 import Footer from "@/src/components/footer/footer";
-import Link from "next/link";
 import Image from "next/image";
 import Image_And_Text from "@/src/components/about/image_text";
 import phlingerAsset from "../src/img/projects/phone_phlinger_create_asset.png";
@@ -32,7 +31,7 @@ export default function Phlinger() {
           }
           header="What Is It?"
           paragraphs={[
-            "          Phone Phlinger is an app targeted towards rank and rent online businesses. Rank and rent businesses will develop web pages, locally rank them to the top of google, and then try to sell the leads that are generated from their website. Leads that come in from a phone number listed on the webpage are the most valuable, and easiest to convert to a sale. There are multiple choices for getting cheap local VOIP phone numbers online, Twilio is a well known provider. The Twilio interface is aimed at developers, and can be overwhelming to set up something as simple as call forwarding. Phone Phlinger makes call forwarding a breeze, along with lots of extras. Phone Phlinger can handle call forwarding, voicemail, whisper messages, caller greetings, call recording, and call tracking with email notifications.",
+            " Phone Phlinger is an app targeted towards rank and rent online businesses. Rank and rent businesses will develop web pages, locally rank them to the top of google, and then try to sell the leads that are generated from their website. Leads that come in from a phone number listed on the webpage are the most valuable, and easiest to convert to a sale. There are multiple choices for getting cheap local VOIP phone numbers online, Twilio is a well known provider. The Twilio interface is aimed at developers, and can be overwhelming to set up something as simple as call forwarding. Phone Phlinger makes call forwarding a breeze, along with lots of extras. Phone Phlinger can handle call forwarding, voicemail, whisper messages, caller greetings, call recording, and call tracking with email notifications.",
           ]}
         ></Image_And_Text>
       </div>
@@ -64,7 +63,7 @@ export default function Phlinger() {
                 height={500}
                 width={1000}
                 src={callLog}
-                alt="screenshot of app phone phliner"
+                alt="screenshot of call logs on phone phlinger"
               ></Image>
             </div>
           }
