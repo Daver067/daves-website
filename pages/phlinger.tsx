@@ -3,7 +3,10 @@ import PageNav from "@/src/components/navbar/Page_NavBar";
 import { useRouter } from "next/navigation";
 import Footer from "@/src/components/footer/footer";
 import Link from "next/link";
-
+import Image from "next/image";
+import Image_And_Text from "@/src/components/about/image_text";
+import phlingerAsset from "../src/img/projects/phone_phlinger_create_asset.png";
+import callLog from "../src/img/projects/call_log_screenshot.png";
 const inter = Inter({ subsets: ["latin"] });
 
 export default function Phlinger() {
@@ -12,62 +15,63 @@ export default function Phlinger() {
   return (
     <div className=" min-h-screen flex flex-col ">
       <PageNav />
-      <h2 className="w-full text-center text-4xl pt-20 pb-5 md:pb-20 underline decoration-1 underline-offset-4">
+      <h2 className="w-full text-center text-4xl pt-20 pb-5 lg:pb-20 underline decoration-1 underline-offset-4">
         Phone Phlinger
       </h2>
-      <div className="px-10 md:px-64 mb-20">
-        <h3 className="block text-2xl text-center underline decoration-1 underline-offset-4 pb-4">
-          What Is It?
-        </h3>
-        <p className="relative leading-6 text-left p-2 text-base font-poppins">
-          {" "}
-          Phone Phlinger is an app targeted towards rank and rent online
-          businesses. Rank and rent businesses will develop web pages, locally
-          rank them to the top of google, and then try to sell the leads that
-          are generated from their website. Leads that come in from a phone
-          number listed on the webpage are the most valuable, and easiest to
-          convert to a sale. There are multiple choices for getting cheap local
-          VOIP phone numbers online, Twilio is a well known provider. The Twilio
-          interface is aimed at developers, and can be overwhelming to set up
-          something as simple as call forwarding. Phone Phlinger makes call
-          forwarding a breeze, along with lots of extras. Phone Phlinger can
-          handle call forwarding, voicemail, whisper messages, caller greetings,
-          call recording, and call tracking with email notifications.
-        </p>
+      <div className=" lg:max-w-[80%] m-auto pb-20 px-6">
+        <Image_And_Text
+          img={
+            <div className=" w-full m-auto ">
+              <Image
+                height={500}
+                width={1000}
+                src={phlingerAsset}
+                alt="screenshot of app phone phliner"
+              ></Image>
+            </div>
+          }
+          header="What Is It?"
+          paragraphs={[
+            "          Phone Phlinger is an app targeted towards rank and rent online businesses. Rank and rent businesses will develop web pages, locally rank them to the top of google, and then try to sell the leads that are generated from their website. Leads that come in from a phone number listed on the webpage are the most valuable, and easiest to convert to a sale. There are multiple choices for getting cheap local VOIP phone numbers online, Twilio is a well known provider. The Twilio interface is aimed at developers, and can be overwhelming to set up something as simple as call forwarding. Phone Phlinger makes call forwarding a breeze, along with lots of extras. Phone Phlinger can handle call forwarding, voicemail, whisper messages, caller greetings, call recording, and call tracking with email notifications.",
+          ]}
+        ></Image_And_Text>
       </div>
-      <div className="px-10 md:px-64 mb-20">
-        <h3 className="block text-2xl text-center underline decoration-1 underline-offset-4 pb-4">
-          Can You Show Me A Demo?
-        </h3>
-        <p className="relative leading-6 text-left p-2 text-base font-poppins">
-          Of course! Check out the demo video below! I only use a trial Twilio
-          account for testing calls, so please ignore the warning message at the
-          start of my phone calls. A paid Twilio account wont have those
-          warnings. Also sorry for the blurs, those are my actual phone numbers
-          and personal email addresses!
-        </p>
+      <div className=" lg:max-w-[80%] m-auto pb-20 mt-0 lg:mt-20 px-6">
+        <Image_And_Text
+          reverse={true}
+          img={
+            <div className=" w-full m-auto ">
+              <iframe
+                className=" w-full aspect-video self-stretch lg:min-h-96 m-auto mb-20"
+                src="https://www.youtube.com/embed/5NRnloSXdsA"
+                title="Phone Phlinger Demo"
+                aria-hidden="true"
+              />{" "}
+            </div>
+          }
+          header="Can You Show Me A Demo?"
+          paragraphs={[
+            "                    Of course! Check out the demo video! I only use a trial Twilio account for testing calls, so please ignore the warning message at the start of my phone calls. A paid Twilio account wont have those warnings. Also sorry for the blurs, those are my actual phone numbers and personal email addresses!",
+          ]}
+        ></Image_And_Text>
       </div>
-      <iframe
-        className=" w-[90%] md:w-[50%] aspect-video self-stretch md:min-h-96 m-auto mb-20"
-        src="https://www.youtube.com/embed/5NRnloSXdsA"
-        title="Phone Phlinger Demo"
-        aria-hidden="true"
-      />{" "}
-      <div className="px-10 md:px-64 mb-20">
-        <h3 className="block text-2xl text-center underline decoration-1 underline-offset-4 pb-4">
-          How Does It Work?
-        </h3>
-        <p className="relative leading-6 text-left p-2 text-base font-poppins">
-          Well, that{"'"}s a secret! Actually, it{"'"}s just a little convuluted
-          to maintain it{"'"}s 0$ spending limit. Phone Phlinger has taken on
-          many shapes, from a simple flask backend, to hosted on amazon ec2
-          (turns out thats not free), to what it is today! I built this for my
-          fiance, who was annoyed at paying the pricetag of other similar
-          software.
-        </p>
 
-        <p className="relative leading-6 text-left p-2 text-base font-poppins">
-          The front end is built with NextJS, using twilio{"'"}s paste package
+      <div className=" lg:max-w-[80%] m-auto pb-20 mt-0 lg:mt-6 px-6">
+        <Image_And_Text
+          img={
+            <div className=" w-full m-auto ">
+              <Image
+                height={500}
+                width={1000}
+                src={callLog}
+                alt="screenshot of app phone phliner"
+              ></Image>
+            </div>
+          }
+          header="How Does It Work?"
+          paragraphs={[
+            `Well, that's a secret! Actually, it's just a little convuluted to maintain it's 0$ spending limit. Phone Phlinger has taken on many shapes, from a simple flask backend, to hosted on amazon ec2 (turns out thats not free), to what it is today! I built this for my fiance, who was annoyed at paying the pricetag of other similar software.`,
+            `The front end is built with NextJS, using twilio's paste package
           for a lot of designs, the site is hosted on vercel. There is a
           Postgres Database which handles user information, accessed with
           prisma. Login information is handled by auth0. All phone logic is
@@ -79,18 +83,13 @@ export default function Phlinger() {
           documentation. Updating information on the webpage Phone Phlinger
           edits JSON data saved on users specific twilio sync accounts. The
           emails are from the gmail API, also accessed through the python
-          backend.
-        </p>
-        <p className="relative leading-6 text-left p-2 text-base font-poppins">
-          I understand that was a bit of a mouthful, but I{"'"}m happy to talk
-          about anything more in depth, just get in{" "}
-          <Link className=" underline " href="/contact">
-            contact
-          </Link>{" "}
-          with me!
-        </p>
+          backend.`,
+            `I understand that was a bit of a mouthful, but I'm happy to talk
+          about anything more in depth, just get in contact with me!`,
+          ]}
+        ></Image_And_Text>
       </div>
-      <div className=" flex justify-evenly pt-4 mb-2">
+      <div className=" flex justify-center pt-4 mb-2">
         <button
           onClick={() =>
             router.push("https://daves-website-theta.vercel.app/contact")
