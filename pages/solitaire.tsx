@@ -17,7 +17,7 @@ export default function Solitaire() {
         Solitaire
       </h2>
 
-      <div className=" md:max-w-[70%] m-auto pb-20 px-6">
+      <div className=" lg:max-w-[70%] m-auto pb-20 px-0 ">
         <Image_And_Text
           img={
             <div className=" w-full m-auto ">
@@ -39,11 +39,11 @@ export default function Solitaire() {
         ></Image_And_Text>
       </div>
 
-      <div className="px-6 max-w-[80%] md:max-w-[70%] m-auto mb-20">
+      <div className="px-0 max-w-[80%] md:max-w-[70%] m-auto mb-20">
         <h3 className="block text-2xl text-center underline decoration-1 underline-offset-4 pb-4">
           What Were The Biggest Hurdles?
         </h3>
-        <p className="relative leading-6 text-left p-2 text-base font-poppins">
+        <p className="relative leading-6 text-left py-2 text-base font-poppins">
           Interacting with git with another person left us a little bit stunned
           at first, and building something from the ground up definitely left us
           with a lot of merge conflicts to deal with. Overall, it was a great
@@ -63,11 +63,11 @@ export default function Solitaire() {
           both methods!
         </p>
       </div>
-      <div className="px-6 max-w-[80%] md:max-w-[70%] m-auto mb-20">
+      <div className="px-0 max-w-[80%] md:max-w-[70%] m-auto mb-20">
         <h3 className="block text-2xl text-center underline decoration-1 underline-offset-4 pb-4">
           Any Further Plans With This Project?
         </h3>
-        <p className="relative leading-6 text-left p-2 text-base font-poppins">
+        <p className="relative leading-6 text-left py-2 text-base font-poppins">
           Yes! The other developer and I are actually considering making a npm
           package for handling cards. It{"'"}s still in early stages, but we are
           optimistic!

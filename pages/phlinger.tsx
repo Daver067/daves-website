@@ -17,7 +17,7 @@ export default function Phlinger() {
       <h2 className="w-full text-center text-4xl pt-20 pb-5 lg:pb-20 underline decoration-1 underline-offset-4">
         Phone Phlinger
       </h2>
-      <div className=" lg:max-w-[80%] m-auto pb-20 px-6">
+      <div className=" lg:max-w-[70%] m-auto pb-20 px-0">
         <Image_And_Text
           img={
             <div className=" w-full m-auto ">
@@ -35,7 +35,7 @@ export default function Phlinger() {
           ]}
         ></Image_And_Text>
       </div>
-      <div className=" lg:max-w-[80%] m-auto pb-20 mt-0 lg:mt-20 px-6">
+      <div className=" lg:max-w-[70%] m-auto pb-20 mt-0 lg:mt-6 px-0">
         <Image_And_Text
           reverse={true}
           img={
@@ -55,7 +55,7 @@ export default function Phlinger() {
         ></Image_And_Text>
       </div>
 
-      <div className=" lg:max-w-[80%] m-auto pb-20 mt-0 lg:mt-6 px-6">
+      <div className=" lg:max-w-[70%] m-auto pb-20 mt-0 lg:mt-6 px-0">
         <Image_And_Text
           img={
             <div className=" w-full m-auto ">

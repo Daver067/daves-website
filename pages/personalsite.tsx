@@ -13,30 +13,30 @@ export default function PersonalSite() {
       <h2 className="w-full text-center text-4xl pt-20 pb-5 md:pb-20 underline decoration-1 underline-offset-4">
         This Website!
       </h2>
-      <div className="px-10 md:px-64 mb-20">
+      <div className="px-0 max-w-[80%] md:max-w-[70%] m-auto mb-20">
         <h3 className="block text-2xl text-center underline decoration-1 underline-offset-4 pb-4">
           What Tech Stack Did You Use?
         </h3>
-        <p className="relative leading-6 text-left p-2 text-base font-poppins">
+        <p className="relative leading-6 text-left py-2 text-base font-poppins">
           This website is built with NextJS, TailwindCSS, and is hosted on
           Vercel!
         </p>
       </div>
-      <div className="px-10 md:px-64 mb-20">
+      <div className="px-0 max-w-[80%] md:max-w-[70%] m-auto mb-20">
         <h3 className="block text-2xl text-center underline decoration-1 underline-offset-4 pb-4">
           Why Did You Make This?
         </h3>
-        <p className="relative leading-6 text-left p-2 text-base font-poppins">
+        <p className="relative leading-6 text-left py-2 text-base font-poppins">
           I wanted somewhere to be able to show off all of my cool projects!
           Maybe it will convince you to hire me, maybe it{"'"}ll do the
           opposite!
         </p>
       </div>
-      <div className="px-10 md:px-64 mb-20">
+      <div className="px-0 max-w-[80%] md:max-w-[70%] m-auto mb-20">
         <h3 className="block text-2xl text-center underline decoration-1 underline-offset-4 pb-4">
           Any Further Plans With This Project?
         </h3>
-        <p className="relative leading-6 text-left p-2 text-base font-poppins">
+        <p className="relative leading-6 text-left py-2 text-base font-poppins">
           I{"'"}m going to keep updating this site as I build more cool things!
         </p>
       </div>

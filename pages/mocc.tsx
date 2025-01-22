@@ -17,7 +17,7 @@ export default function Mocc() {
       <h2 className="w-full text-center text-4xl pt-20 pb-5 md:pb-20 underline decoration-1 underline-offset-4">
         Calgary Cleaning Site
       </h2>
-      <div className=" lg:max-w-[80%] m-auto pb-20 px-6">
+      <div className=" lg:max-w-[70%] m-auto pb-20 px-0 ">
         <Image_And_Text
           img={
             <div className=" w-full m-auto ">
@@ -37,7 +37,7 @@ export default function Mocc() {
           ]}
         ></Image_And_Text>
       </div>
-      <div className=" lg:max-w-[80%] m-auto pb-20 mt-0 lg:mt-6 px-6">
+      <div className=" lg:max-w-[70%] m-auto pb-20 mt-0 lg:mt-6 px-0">
         <Image_And_Text
           reverse={true}
           img={
@@ -59,7 +59,7 @@ export default function Mocc() {
           ]}
         ></Image_And_Text>
       </div>
-      <div className=" lg:max-w-[80%] m-auto pb-20 mt-0 lg:mt-6 px-6">
+      <div className=" lg:max-w-[70%] m-auto pb-20 mt-0 lg:mt-6 px-0">
         <Image_And_Text
           img={
             <div className=" w-full m-auto ">
