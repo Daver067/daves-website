@@ -40,7 +40,7 @@ export default function PersonalSite() {
           I{"'"}m going to keep updating this site as I build more cool things!
         </p>
       </div>
-      <div className=" flex justify-evenly pt-4 mb-2">
+      <div className=" flex justify-center pt-4 mb-2">
         <button
           onClick={() =>
             router.push("https://github.com/Daver067/daves-website")

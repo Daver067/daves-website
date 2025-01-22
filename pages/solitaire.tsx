@@ -2,6 +2,9 @@ import { Inter } from "next/font/google";
 import PageNav from "@/src/components/navbar/Page_NavBar";
 import { useRouter } from "next/navigation";
 import Footer from "@/src/components/footer/footer";
+import Image_And_Text from "@/src/components/about/image_text";
+import Image from "next/image";
+import solitairePlaying from "../src/img/projects/solitaire_in_progress.png";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -13,19 +16,30 @@ export default function Solitaire() {
       <h2 className="w-full text-center text-4xl pt-20 pb-5 md:pb-20 underline decoration-1 underline-offset-4">
         Solitaire
       </h2>
-      <div className="px-10 md:px-64 mb-20">
-        <h3 className="block text-2xl text-center underline decoration-1 underline-offset-4 pb-4">
-          Why Did You Make This?
-        </h3>
-        <p className="relative leading-6 text-left p-2 text-base font-poppins">
-          This was a project outside of the scope of The Odin Project. Myself
+
+      <div className=" md:max-w-[70%] m-auto pb-20 px-6">
+        <Image_And_Text
+          img={
+            <div className=" w-full m-auto ">
+              <Image
+                height={500}
+                width={1000}
+                src={solitairePlaying}
+                alt="solitaire game in progress"
+              ></Image>
+            </div>
+          }
+          header="Why Did You Make This?"
+          paragraphs={[
+            `This was a project outside of the scope of The Odin Project. Myself
           and another developer had decided we wanted first hand experience what
           it would be like to both be working on a repo and decided we would
-          build something together. We chose a solitaire game.
-        </p>
+          build something together. We chose a solitaire game.`,
+          ]}
+        ></Image_And_Text>
       </div>
 
-      <div className="px-10 md:px-64 mb-20">
+      <div className="px-6 max-w-[80%] md:max-w-[70%] m-auto mb-20">
         <h3 className="block text-2xl text-center underline decoration-1 underline-offset-4 pb-4">
           What Were The Biggest Hurdles?
         </h3>
@@ -49,7 +63,7 @@ export default function Solitaire() {
           both methods!
         </p>
       </div>
-      <div className="px-10 md:px-64 mb-20">
+      <div className="px-6 max-w-[80%] md:max-w-[70%] m-auto mb-20">
         <h3 className="block text-2xl text-center underline decoration-1 underline-offset-4 pb-4">
           Any Further Plans With This Project?
         </h3>
@@ -59,7 +73,7 @@ export default function Solitaire() {
           optimistic!
         </p>
       </div>
-      <div className=" flex justify-evenly pt-4 mb-2">
+      <div className=" flex justify-center pt-4 mb-2">
         <button
           onClick={() => router.push("https://github.com/Daver067/card-games")}
           type="button"
