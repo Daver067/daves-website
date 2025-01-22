@@ -21,8 +21,8 @@ const languagespics = {
     <Image
       src={python}
       alt="snake"
-      height={"48"}
-      width={"48"}
+      height={48}
+      width={48}
       className=" max-w-12 max-h-12 "
     />
   ),
@@ -30,8 +30,8 @@ const languagespics = {
     <Image
       src={aws}
       alt="aws"
-      height={"48"}
-      width={"48"}
+      height={48}
+      width={48}
       className=" max-w-12 max-h-12 "
     />
   ),
@@ -39,8 +39,8 @@ const languagespics = {
     <Image
       src={bash}
       alt="bash"
-      height={"48"}
-      width={"48"}
+      height={48}
+      width={48}
       className=" max-w-12 max-h-12 "
     />
   ),
@@ -48,8 +48,8 @@ const languagespics = {
     <Image
       src={css}
       alt="css"
-      height={"48"}
-      width={"48"}
+      height={48}
+      width={48}
       className=" max-w-12 max-h-12 "
     />
   ),
@@ -57,8 +57,8 @@ const languagespics = {
     <Image
       src={gmail}
       alt="gmail"
-      height={"48"}
-      width={"48"}
+      height={48}
+      width={48}
       className=" max-w-12 max-h-12 "
     />
   ),
@@ -66,8 +66,8 @@ const languagespics = {
     <Image
       src={html}
       alt="html"
-      height={"48"}
-      width={"48"}
+      height={48}
+      width={48}
       className=" max-w-12 max-h-12 "
     />
   ),
@@ -75,8 +75,8 @@ const languagespics = {
     <Image
       src={js}
       alt="javascript"
-      height={"48"}
-      width={"48"}
+      height={48}
+      width={48}
       className=" max-w-12 max-h-12 "
     />
   ),
@@ -84,8 +84,8 @@ const languagespics = {
     <Image
       src={nextjs}
       alt="nextjs"
-      height={"48"}
-      width={"48"}
+      height={48}
+      width={48}
       className=" max-w-12 max-h-12 "
     />
   ),
@@ -93,8 +93,8 @@ const languagespics = {
     <Image
       src={postgres}
       alt="postgres"
-      height={"48"}
-      width={"48"}
+      height={48}
+      width={48}
       className=" max-w-12 max-h-12 "
     />
   ),
@@ -102,8 +102,8 @@ const languagespics = {
     <Image
       src={react}
       alt="react"
-      height={"48"}
-      width={"48"}
+      height={48}
+      width={48}
       className=" max-w-12 max-h-12 "
     />
   ),
@@ -111,8 +111,8 @@ const languagespics = {
     <Image
       src={sass}
       alt="sass"
-      height={"48"}
-      width={"48"}
+      height={48}
+      width={48}
       className=" max-w-12 max-h-12 "
     />
   ),
@@ -120,8 +120,8 @@ const languagespics = {
     <Image
       src={sqlite}
       alt="sqlite"
-      height={"48"}
-      width={"48"}
+      height={48}
+      width={48}
       className=" max-w-12 max-h-12 "
     />
   ),
@@ -129,8 +129,8 @@ const languagespics = {
     <Image
       src={tailwind}
       alt="tailwind"
-      height={"48"}
-      width={"48"}
+      height={48}
+      width={48}
       className=" max-w-12 max-h-12 "
     />
   ),
@@ -138,8 +138,8 @@ const languagespics = {
     <Image
       src={twilio}
       alt="twilio"
-      height={"48"}
-      width={"48"}
+      height={48}
+      width={48}
       className=" max-w-12 max-h-12 "
     />
   ),
@@ -147,8 +147,8 @@ const languagespics = {
     <Image
       src={vercel}
       alt="vercel"
-      height={"48"}
-      width={"48"}
+      height={48}
+      width={48}
       className=" max-w-12 max-h-12 "
     />
   ),
@@ -156,8 +156,8 @@ const languagespics = {
     <Image
       src={webpack}
       alt="webpack"
-      height={"48"}
-      width={"48"}
+      height={48}
+      width={48}
       className=" max-w-12 max-h-12 "
     />
   ),

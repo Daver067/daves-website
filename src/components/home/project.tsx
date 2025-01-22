@@ -39,7 +39,7 @@ const Project: React.FC<Project> = ({
 
   const front = (
     <div className="">
-      <Image className="" src={img} alt={name} />
+      <Image className="" src={img} alt={name} height={400} width={600} />
     </div>
   );
 
