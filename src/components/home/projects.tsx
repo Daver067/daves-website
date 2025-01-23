@@ -53,8 +53,8 @@ const projects = [
     route: "/personalsite",
     img: personal,
     description: "This site was built by me! I used NextJS and TailwindCSS. ",
-    repo: "  https://github.com/Daver067/daves-website",
-    website: "https://daves-website-theta.vercel.app",
+    repo: "https://github.com/Daver067/daves-website",
+    website: "https://www.davediemert.com/",
     languages: ["html", "css", "tailwind", "javascript", "nextjs", "vercel"],
   },
 ];
