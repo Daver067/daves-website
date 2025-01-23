@@ -14,13 +14,13 @@ const Image_And_Text: React.FC<Image_And_Text> = ({
   return (
     <div
       className={`text-lg box-border flex flex-col ${
-        reverse ? "md:flex-row-reverse" : "md:flex-row"
+        reverse ? "lg:flex-row-reverse" : "lg:flex-row"
       }`}
     >
       <div
         className={` w-[80%] ${
-          reverse ? "md:ml-auto mr-0" : "  md:mr-auto ml-0"
-        } my-auto md:w-[45%] max-md:m-auto max-md:ml-auto max-md:mr-auto h-full`}
+          reverse ? "lg:ml-auto mr-0" : "  lg:mr-auto ml-0"
+        } my-auto lg:w-[45%] max-lg:m-auto max-lg:ml-auto max-lg:mr-auto h-full`}
       >
         <h2 className="block text-2xl text-center underline decoration-1 underline-offset-4 pb-4">
           {header}
@@ -33,7 +33,7 @@ const Image_And_Text: React.FC<Image_And_Text> = ({
           );
         })}
       </div>
-      <div className=" w-[80%] md:w-[45%] h-[full] my-2 self-center">{img}</div>
+      <div className=" w-[80%] lg:w-[45%] h-[full] my-2 self-center">{img}</div>
     </div>
   );
 };
