@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import { FaFacebook } from "react-icons/fa";
 import { FaInstagram } from "react-icons/fa";
 import { FaLinkedin } from "react-icons/fa";
@@ -7,7 +7,7 @@ import { FaGithub } from "react-icons/fa";
 interface Footer {}
 const Footer: React.FC<Footer> = ({}) => {
   return (
-    <div className=" mt-10 bg-tertiary-color min-h-[10vh] w-full p-5 font-poppins ">
+    <div className=" mt-10 py-8 bg-tertiary-color min-h-[10vh] w-full font-poppins ">
       <div className="flex justify-center">
         <div className="">
           <h3 className="text-center text-xl mb-3 underline decoration-1 underline-offset-4 ">
@@ -19,7 +19,7 @@ const Footer: React.FC<Footer> = ({}) => {
                 href="https://www.facebook.com/dave.diemert"
                 className="hover:text-text-color-hovering"
               >
-                <div className="flex  ">
+                <div className="flex">
                   <FaFacebook className="my-auto" />
                   <h3 className="pl-3">Facebook</h3>
                 </div>
@@ -39,7 +39,7 @@ const Footer: React.FC<Footer> = ({}) => {
                 href="https://www.linkedin.com/in/dave-diemert-a47135306/"
                 className="hover:text-text-color-hovering"
               >
-                <div className="flex ">
+                <div className="flex">
                   <FaLinkedin className="my-auto" />
                   <h3 className="pl-3">LinkedIn</h3>
                 </div>
