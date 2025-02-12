@@ -27,6 +27,20 @@ const config: Config = {
         "tertiary-color-hovering": "var(--tertiary-color-hovering)",
         "text-color-hovering": "var(--text-color-hovering)",
       },
+      animation: {
+        slideInRight: "slideInFromRight 1.0s ease-out forwards",
+        slideInLeft: "slideInFromLeft 1.0s ease-out forwards",
+      },
+      keyframes: {
+        slideInFromRight: {
+          from: { transform: "translateX(100%)", opacity: "0" },
+          to: { transform: "translateX(0)", opacity: "1" },
+        },
+        slideInFromLeft: {
+          from: { transform: "translateX(-100%)", opacity: "0" },
+          to: { transform: "translateX(0)", opacity: "1" },
+        },
+      },
     },
   },
   plugins: [],
