@@ -15,7 +15,6 @@ const FadeIn: React.FC<FadeInProps> = ({ children }) => {
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
-          console.log(entry.isIntersecting); // log to check if it's firing
           if (entry.isIntersecting) {
             setIsVisible(true);
           } else {
@@ -23,7 +22,10 @@ const FadeIn: React.FC<FadeInProps> = ({ children }) => {
           }
         });
       },
-      { threshold: 0.6 }
+      {
+        rootMargin: "-51% 0%",
+        threshold: 0,
+      }
     );
 
     observer.observe(element);

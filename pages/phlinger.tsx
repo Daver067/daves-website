@@ -32,6 +32,7 @@ export default function Phlinger() {
           " Phone Phlinger is an app targeted towards rank and rent online businesses. Rank and rent businesses will develop web pages, locally rank them to the top of google, and then try to sell the leads that are generated from their website. Leads that come in from a phone number listed on the webpage are the most valuable, and easiest to convert to a sale. There are multiple choices for getting cheap local VOIP phone numbers online, Twilio is a well known provider. The Twilio interface is aimed at developers, and can be overwhelming to set up something as simple as call forwarding. Phone Phlinger makes call forwarding a breeze, along with lots of extras. Phone Phlinger can handle call forwarding, voicemail, whisper messages, caller greetings, call recording, and call tracking with email notifications.",
         ]}
       ></Image_And_Text>
+      <div className="md:mt-28"></div>
       <Image_And_Text
         reverse={true}
         img={
