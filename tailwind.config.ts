@@ -31,6 +31,10 @@ const config: Config = {
         slideInRight: "slideInFromRight 1.0s ease-out forwards",
         slideInLeft: "slideInFromLeft 1.0s ease-out forwards",
       },
+      transitionDuration: {
+        "1200": "1200ms",
+        "1500": "1500ms",
+      },
       keyframes: {
         slideInFromRight: {
           from: { transform: "translateX(100%)", opacity: "0" },
