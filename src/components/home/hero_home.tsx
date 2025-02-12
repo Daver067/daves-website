@@ -44,7 +44,9 @@ const HeroHome = () => {
         marginTop: `calc((100vh - 80vh - ${navbarHeight}px) / 2)`,
       }}
     >
-      <div className="h-[80vh] flex justify-center items-center bg-zinc-800 ">
+      <div className="h-[80vh] flex justify-center items-center bg-zinc-800 relative ">
+        <div className="absolute top-0 left-0 w-full h-6 bg-gradient-to-b from-black to-zinc-800"></div>
+        <div className="absolute bottom-0 left-0 w-full h-6 bg-gradient-to-t from-black to-zinc-800"></div>
         <div className="overflow-x-hidden w-full">
           <section ref={sectionRef} className="w-full">
             <div className="mx-auto max-w-7xl flex flex-col lg:flex-row items-center justify-center gap-14 lg:gap-10">
