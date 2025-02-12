@@ -6,7 +6,7 @@ const ProjectsList = () => {
     <div className=" ">
       <div className="  pb-10 lg:pl-8">
         <h3 className="text-gray-400 mx-12 lg:mx-24 text-xl font-bold leading-tight md:text-3xl font-poppins md:pl-48">
-          Projects I have built:
+          Things I&apos;ve built:
         </h3>
       </div>
       {projects.map((project) => {

@@ -39,8 +39,8 @@ const HeroHome = () => {
 
   return (
     <div
-      className="h-screen"
       style={{
+        height: `calc(100vh - ${navbarHeight}px - ((100vh - 80vh - ${navbarHeight}px) / 2))`,
         marginTop: `calc((100vh - 80vh - ${navbarHeight}px) / 2)`,
       }}
     >
