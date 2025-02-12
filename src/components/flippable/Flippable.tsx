@@ -44,13 +44,13 @@ const Flippable: React.FC<Flippable> = ({ front, back }) => {
       onMouseEnter={(e) => {
         const { target } = e;
         if (target instanceof HTMLElement) {
-          setFlipped(!flipped);
+          setFlipped(true);
         }
       }}
       onMouseLeave={(e) => {
         const { target } = e;
         if (target instanceof HTMLElement) {
-          setFlipped(!flipped);
+          setFlipped(false);
         }
       }}
     >

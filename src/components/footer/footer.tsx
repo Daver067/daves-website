@@ -7,10 +7,10 @@ import { FaGithub } from "react-icons/fa";
 interface Footer {}
 const Footer: React.FC<Footer> = ({}) => {
   return (
-    <div className=" mt-10 py-8 bg-tertiary-color min-h-[10vh] w-full font-poppins ">
+    <div className=" mt-10 py-6 bg-tertiary-color min-h-[10vh] w-full font-poppins ">
       <div className="flex justify-center">
         <div className="">
-          <h3 className="text-center text-xl mb-3 underline decoration-1 underline-offset-4 ">
+          <h3 className="text-center text-xl mb-6 underline decoration-1 underline-offset-4 ">
             Socials
           </h3>
           <div className="flex  gap-10">

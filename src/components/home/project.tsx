@@ -74,7 +74,7 @@ const Project: React.FC<Project> = ({
   return (
     <div
       ref={projectRef}
-      className={`w-full xl:px-[15vw] pb-3 border-t-2 border-zinc-500 py-[5vh] lg:py-[15vh] transition-opacity duration-1200 ${
+      className={`w-full xl:px-[15vw] pb-3 border-t-2 border-zinc-500 py-[5vh] lg:py-[10vh] transition-opacity duration-1200 ${
         isVisible ? "opacity-100" : "opacity-0"
       }`}
     >
