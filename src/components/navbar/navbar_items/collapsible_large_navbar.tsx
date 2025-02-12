@@ -18,7 +18,7 @@ const CollapsibleMenu: React.FC<CollapsibleMenu> = ({ childrenString }) => {
       className="!visible mt-2 hidden flex-grow basis-[100%] items-center lg:mt-0 lg:!flex lg:basis-auto"
       id="navbarSupportedContent2"
     >
-      <ul className="w-full list-style-none justify-center flex flex-col ps-0 lg:mt-1 lg:flex-row">
+      <ul className="w-full list-style-none justify-center flex flex-col ps-0 lg:mt-1 lg:flex-row text-l lg:text-xl">
         {childrenString.map((item) => {
           if (item.type === "drop-down") {
             if (item.childrenString === undefined) return;

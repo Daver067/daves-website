@@ -9,7 +9,7 @@ const DropDownItem: React.FC<DropDownItem> = ({ name, route }) => {
   return (
     <li>
       <a
-        className={`block w-full whitespace-nowrap bg-tertiary-color px-4 py-2 text-xl lg:text-2xl font-normal  hover:text-white/80 ${
+        className={`block w-full whitespace-nowrap bg-tertiary-color px-4 py-2  font-normal  hover:text-white/80 ${
           pathname === route ? "text-white" : "text-white/60"
         } hover:bg-tertiary-color-hovering`}
         href={route}

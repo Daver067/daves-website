@@ -29,7 +29,7 @@ const DropDown: React.FC<DropDown> = ({ childrenString, dropDownName }) => {
   }, [isOpen]);
 
   return (
-    <li className="mb-4 ps-2 lg:mb-0 lg:pe-1 lg:ps-0 text-xl lg:text-2xl">
+    <li className="mb-4 ps-2 lg:mb-0 lg:pe-1 lg:ps-0 ">
       <div
         className="flex flex-wrap "
         onMouseEnter={() => setIsOpen(true)}
