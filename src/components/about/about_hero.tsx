@@ -1,4 +1,5 @@
 import languagespics from "../../img/languages";
+import FadeIn from "../multi-use-components/fadeIn";
 import Tooltip from "./tooltip";
 import React, { useState, useEffect, useRef } from "react";
 
@@ -60,6 +61,7 @@ const HeroAbout = () => {
           <div className="w-[95vw] mx-auto flex justify-center flex-col lg:flex-row lg:w-[80vw] lg:py-12">
             <div className="w-[80%] mx-auto lg:w-[45%] mb-10 lg:mb-auto lg:pb-5">
               <div className="text-2xl text-center py-5">Hey I{`'`}m Dave!</div>
+
               <div className="">
                 <p className="pb-4">
                   I{`'`}m a self-taught web developer from Alberta, Canada where
