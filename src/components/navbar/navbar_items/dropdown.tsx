@@ -1,5 +1,6 @@
 import { useState, useRef, useEffect } from "react";
 import DropDownItem from "./dropdown_item";
+import { usePathname } from "next/navigation";
 
 interface DropDown {
   dropDownName: string;
@@ -13,6 +14,8 @@ interface DropDown {
 const DropDown: React.FC<DropDown> = ({ childrenString, dropDownName }) => {
   const [isOpen, setIsOpen] = useState(false);
   const dropdownRef = useRef<HTMLUListElement>(null);
+  const pathname = usePathname();
+  const allPaths = childrenString.map((item) => item.route);
 
   useEffect(() => {
     if (dropdownRef.current) {
@@ -34,7 +37,9 @@ const DropDown: React.FC<DropDown> = ({ childrenString, dropDownName }) => {
       >
         <div className="relative ms-2">
           <a
-            className="flex items-center text-black transition duration-200 hover:text-black/80 dark:text-white/60 dark:hover:text-white/80 lg:px-2"
+            className={`flex items-center  transition duration-200 ${
+              allPaths.includes(pathname) ? "text-white" : "text-white/60"
+            }  hover:text-white/80 lg:px-2`}
             href="#"
             type="button"
             aria-expanded={isOpen}
