@@ -1,6 +1,5 @@
 import React, { useState, useEffect, useRef } from "react";
 import Image, { StaticImageData } from "next/image";
-import { useRouter } from "next/navigation";
 import languagepics from "../../img/languages";
 import Flippable from "../flippable/Flippable";
 import Link from "next/link";

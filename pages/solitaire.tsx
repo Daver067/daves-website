@@ -16,27 +16,25 @@ export default function Solitaire() {
         Solitaire
       </h2>
 
-      <div className=" lg:max-w-[70%] m-auto pb-20 px-0 ">
-        <Image_And_Text
-          img={
-            <div className=" w-full m-auto ">
-              <Image
-                height={500}
-                width={1000}
-                src={solitairePlaying}
-                alt="solitaire game in progress"
-              ></Image>
-            </div>
-          }
-          header="Why Did I Make This?"
-          paragraphs={[
-            `This was a project outside of the scope of The Odin Project. Myself
+      <Image_And_Text
+        img={
+          <div className=" w-full m-auto ">
+            <Image
+              height={500}
+              width={1000}
+              src={solitairePlaying}
+              alt="solitaire game in progress"
+            ></Image>
+          </div>
+        }
+        header="Why Did I Make This?"
+        paragraphs={[
+          `This was a project outside of the scope of The Odin Project. Myself
           and another developer had decided we wanted first hand experience what
           it would be like to both be working on a repo and decided we would
           build something together. We chose a solitaire game.`,
-          ]}
-        ></Image_And_Text>
-      </div>
+        ]}
+      ></Image_And_Text>
 
       <div className="px-0 max-w-[80%] md:max-w-[70%] m-auto mb-20">
         <h3 className="block text-2xl text-center underline decoration-1 underline-offset-4 pb-4">

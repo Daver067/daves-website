@@ -15,20 +15,17 @@ export default function PersonalSite() {
       <h2 className="w-full text-center text-4xl pt-20 pb-5 md:pb-20 underline decoration-1 underline-offset-4">
         This Website!
       </h2>
-      <div className=" md:max-w-[70%] m-auto pb-20 px-0 ">
-        {" "}
-        <TextBesideText
-          header1="What Tech Stack Did I Use?"
-          paragraphs1={[
-            `This website is built with NextJS, TailwindCSS, and is hosted on
+      <TextBesideText
+        header1="What Tech Stack Did I Use?"
+        paragraphs1={[
+          `This website is built with NextJS, TailwindCSS, and is hosted on
           Vercel!`,
-          ]}
-          header2="Did I Use Any Libraries?"
-          paragraphs2={[
-            `I used react-icons for some of the icons throughout my site as well as tailwindCSS. I did not use any component libraries, everything you see here was made by me!`,
-          ]}
-        ></TextBesideText>
-      </div>
+        ]}
+        header2="Did I Use Any Libraries?"
+        paragraphs2={[
+          `I used react-icons for some of the icons throughout my site as well as tailwindCSS. I did not use any component libraries, everything you see here was made by me!`,
+        ]}
+      ></TextBesideText>
 
       <div className="px-0 max-w-[80%] md:max-w-[70%] m-auto mb-20">
         <h3 className="block text-2xl text-center underline decoration-1 underline-offset-4 pb-4">
