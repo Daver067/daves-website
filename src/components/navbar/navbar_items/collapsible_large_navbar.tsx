@@ -1,4 +1,3 @@
-// src/components/CollapsibleMenu.tsx
 import DropDown from "./dropdown";
 import NavbarItem from "./navbar_item";
 interface CollapsibleMenu {

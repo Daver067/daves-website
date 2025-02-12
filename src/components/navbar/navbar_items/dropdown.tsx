@@ -1,4 +1,6 @@
+import { useState, useRef, useEffect } from "react";
 import DropDownItem from "./dropdown_item";
+
 interface DropDown {
   dropDownName: string;
   childrenString: {
@@ -9,36 +11,33 @@ interface DropDown {
 }
 
 const DropDown: React.FC<DropDown> = ({ childrenString, dropDownName }) => {
-  const ulID = dropDownName;
+  const [isOpen, setIsOpen] = useState(false);
+  const dropdownRef = useRef<HTMLUListElement>(null);
 
-  const openDropDown = () => {
-    const dropdown = document.getElementById(ulID);
-    if (dropdown == null) return;
-    if (dropdown.classList.contains("hidden")) {
-      dropdown.classList.remove("hidden");
+  useEffect(() => {
+    if (dropdownRef.current) {
+      if (isOpen) {
+        dropdownRef.current.style.height =
+          dropdownRef.current.scrollHeight + "px";
+      } else {
+        dropdownRef.current.style.height = "0px";
+      }
     }
-  };
-
-  const closeDropDown = () => {
-    const dropdown = document.getElementById(ulID);
-    if (dropdown == null) return;
-    dropdown.classList.add("hidden");
-  };
+  }, [isOpen]);
 
   return (
-    <li className="my-4 ps-2 lg:my-0 lg:pe-1 lg:ps-2">
+    <li className="mb-4 ps-2 lg:mb-0 lg:pe-1 lg:ps-0 text-xl lg:text-2xl">
       <div
         className="flex flex-wrap "
-        onMouseLeave={closeDropDown}
-        onMouseEnter={openDropDown}
+        onMouseEnter={() => setIsOpen(true)}
+        onMouseLeave={() => setIsOpen(false)}
       >
         <div className="relative ms-2">
           <a
-            className="flex items-center  text-black transition duration-200 hover:text-black/80 hover:ease-in-out focus:text-black/80 active:text-black/80 motion-reduce:transition-none dark:text-white/60 dark:hover:text-white/80 dark:focus:text-white/80 dark:active:text-white/80 lg:px-2"
+            className="flex items-center text-black transition duration-200 hover:text-black/80 dark:text-white/60 dark:hover:text-white/80 lg:px-2"
             href="#"
             type="button"
-            id="dropdownMenuButton2"
-            aria-expanded="false"
+            aria-expanded={isOpen}
           >
             {dropDownName}
             <span className="ms-2 [&>svg]:w-5">
@@ -46,6 +45,9 @@ const DropDown: React.FC<DropDown> = ({ childrenString, dropDownName }) => {
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 20 20"
                 fill="currentColor"
+                className={`transition-transform duration-300 ${
+                  isOpen ? "rotate-180" : ""
+                }`}
               >
                 <path
                   fillRule="evenodd"
@@ -56,22 +58,22 @@ const DropDown: React.FC<DropDown> = ({ childrenString, dropDownName }) => {
             </span>
           </a>
           <ul
-            id={ulID}
-            className="absolute z-[1000] hidden float-left pt-5 m-0 min-w-max list-none overflow-hidden rounded-lg border-none bg-tertiary-color bg-clip-padding text-left text-base shadow-lg data-[twe-dropdown-show]:block "
+            ref={dropdownRef}
+            className="absolute z-[1000] overflow-hidden transition-all duration-1000 ease-in-out bg-tertiary-color shadow-lg rounded-b-lg mt-4"
+            style={{ height: "0px" }}
           >
-            {childrenString.map((item) => {
-              return (
-                <DropDownItem
-                  key={item.name}
-                  name={item.name}
-                  route={item.route}
-                />
-              );
-            })}
+            {childrenString.map((item) => (
+              <DropDownItem
+                key={item.name}
+                name={item.name}
+                route={item.route}
+              />
+            ))}
           </ul>
         </div>
       </div>
     </li>
   );
 };
+
 export default DropDown;

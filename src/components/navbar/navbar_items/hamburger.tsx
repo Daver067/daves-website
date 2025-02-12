@@ -1,6 +1,4 @@
-// src/components/HamburgerMenu.tsx
 import { useState, useEffect, useRef } from "react";
-import Link from "next/link";
 import { useRouter } from "next/router";
 import HamburgerDropdown from "./hamburger-dropdown";
 

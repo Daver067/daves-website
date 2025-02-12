@@ -1,4 +1,3 @@
-// src/components/HamburgerDropdown.tsx
 import { useState, useEffect, useRef } from "react";
 import { useRouter } from "next/router";
 import { FiChevronsDown } from "react-icons/fi";
