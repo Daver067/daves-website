@@ -40,7 +40,7 @@ const Image_And_Text: React.FC<Image_And_Text> = ({
   return (
     <div
       ref={elementRef}
-      className={` min-h-[80vh] pt-5 w-screen text-lg lg:text-xl box-border font-poppins transition-opacity duration-1200 ${
+      className={` min-h-[50vh] pt-5 w-screen text-lg lg:text-xl box-border transition-opacity duration-1200 ${
         isVisible ? "opacity-100" : "opacity-0"
       }
         `}

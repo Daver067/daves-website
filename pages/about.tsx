@@ -17,7 +17,7 @@ export default function About() {
     photos_img.running,
   ];
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen tracking-wide font-poppins">
       <PageNav />
       <HeroAbout />
       <Image_And_Text

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect, useRef } from "react";
 interface TextBesideText {
   header1: string;
   paragraphs1: string[];
@@ -13,43 +13,75 @@ const TextBesideText: React.FC<TextBesideText> = ({
   paragraphs2,
   reverse = false,
 }) => {
+  const [isVisible, setIsVisible] = useState(false);
+  const elementRef = useRef(null);
+
+  useEffect(() => {
+    const project = elementRef.current;
+
+    if (!project) return;
+    const observer = new IntersectionObserver(
+      (entries) => {
+        if (entries[0].isIntersecting) {
+          setIsVisible(true);
+        } else {
+          setIsVisible(false);
+        }
+      },
+      { threshold: 0.4 }
+    );
+
+    observer.observe(project);
+
+    return () => {
+      observer.unobserve(project);
+    };
+  }, []);
   return (
     <div
-      className={`text-lg box-border flex flex-col gap-20 lg:gap-0 ${
-        reverse ? "lg:flex-row-reverse" : "lg:flex-row"
-      }`}
+      ref={elementRef}
+      className={` min-h-[50vh] pt-5 w-screen text-lg lg:text-xl box-border transition-opacity duration-1200 ${
+        isVisible ? "opacity-100" : "opacity-0"
+      }
+      `}
     >
       <div
-        className={` w-[80%] ${
-          reverse ? "lg:ml-auto mr-0" : "  lg:mr-auto ml-0"
-        } mt-0 mb-auto lg:w-[45%] max-lg:mb-auto max-lg:mt-auto max-lg:ml-auto max-lg:mr-auto h-full`}
+        className={`w-[95vw]  lg:w-[70vw] mx-auto flex flex-col gap-10 lg:gap-0 ${
+          reverse ? "lg:flex-row-reverse" : "lg:flex-row"
+        }`}
       >
-        <h2 className="block text-2xl text-center underline decoration-1 underline-offset-4 pb-4">
-          {header1}
-        </h2>
-        {paragraphs1.map((p, i) => {
-          return (
-            <p key={i} className="relative leading-6 text-left py-2 text-base ">
-              {p}
-            </p>
-          );
-        })}
-      </div>
-      <div
-        className={` w-[80%] ${
-          reverse ? "lg:ml-0 mr-auto" : "  lg:mr-0 ml-auto"
-        } mt-0 mb-auto lg:w-[45%] max-lg:mb-auto max-lg:mt-auto max-lg:ml-auto max-lg:mr-auto h-full`}
-      >
-        <h2 className="block text-2xl text-center underline decoration-1 underline-offset-4 pb-4">
-          {header2}
-        </h2>
-        {paragraphs2.map((p, i) => {
-          return (
-            <p key={i} className="relative leading-6 text-left py-2 text-base ">
-              {p}
-            </p>
-          );
-        })}
+        <div
+          className={` w-[80%] ${
+            reverse ? "lg:ml-auto mr-0" : "  lg:mr-auto ml-0"
+          } mt-0 mb-auto lg:w-[45%] max-lg:mb-auto max-lg:mt-auto max-lg:ml-auto max-lg:mr-auto h-full`}
+        >
+          <h2 className="block text-2xl text-center underline decoration-1 underline-offset-4 pb-4">
+            {header1}
+          </h2>
+          {paragraphs1.map((p, i) => {
+            return (
+              <p key={i} className="relative text-left py-2  ">
+                {p}
+              </p>
+            );
+          })}
+        </div>
+        <div
+          className={` w-[80%] ${
+            reverse ? "lg:ml-0 mr-auto" : "  lg:mr-0 ml-auto"
+          } mt-0 mb-auto lg:w-[45%] max-lg:mb-auto max-lg:mt-auto max-lg:ml-auto max-lg:mr-auto h-full`}
+        >
+          <h2 className="block text-2xl text-center underline decoration-1 underline-offset-4 pb-4">
+            {header2}
+          </h2>
+          {paragraphs2.map((p, i) => {
+            return (
+              <p key={i} className="relative text-left py-2">
+                {p}
+              </p>
+            );
+          })}
+        </div>
       </div>
     </div>
   );

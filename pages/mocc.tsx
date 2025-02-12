@@ -12,7 +12,7 @@ const inter = Inter({ subsets: ["latin"] });
 
 export default function Mocc() {
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen tracking-wide font-poppings">
       <PageNav />
       <h2 className="w-full text-center text-4xl pt-20 pb-5 md:pb-20 underline decoration-1 underline-offset-4">
         Calgary Cleaning Site

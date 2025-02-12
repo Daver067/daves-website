@@ -41,7 +41,7 @@ const HeroAbout = () => {
 
   return (
     <div
-      className="w-full bg-black font-poppins text-lg lg:text-xl overflow-hidden"
+      className="w-full bg-black text-lg lg:text-xl overflow-hidden"
       style={{
         minHeight: `calc(100vh - ${navbarHeight}px - ((100vh - 80vh - ${navbarHeight}px) / 2))`,
         marginTop: `calc((100vh - 80vh - ${navbarHeight}px) / 2)`,
@@ -57,10 +57,10 @@ const HeroAbout = () => {
           About Me
         </div>
         <div className="w-full bg-zinc-800">
-          <div className="w-[95vw] mx-auto flex justify-center flex-col lg:flex-row lg:w-[80vw]">
+          <div className="w-[95vw] mx-auto flex justify-center flex-col lg:flex-row lg:w-[80vw] lg:py-12">
             <div className="w-[80%] mx-auto lg:w-[45%] mb-10 lg:mb-auto lg:pb-5">
               <div className="text-2xl text-center py-5">Hey I{`'`}m Dave!</div>
-              <div className="tracking-wide">
+              <div className="">
                 <p className="pb-4">
                   I{`'`}m a self-taught web developer from Alberta, Canada where
                   I also work full-time as a licensed Electrician.

@@ -50,7 +50,7 @@ const ContactForm: React.FC = () => {
   };
 
   return (
-    <div className="flex w-full justify-center my-4 md:my-12 font-poppins ">
+    <div className="flex w-full justify-center my-4 md:my-12 ">
       {submitted ? (
         <div className="w-full bg-black">
           <div className="flex items-center justify-center  py-10">

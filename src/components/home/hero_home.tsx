@@ -52,7 +52,7 @@ const HeroHome = () => {
             <div className="mx-auto max-w-7xl flex flex-col lg:flex-row items-center justify-center gap-14 lg:gap-10">
               <div className="max-w-2xl text-center flex-grow">
                 <h3
-                  className={`py-6 text-xl text-gray-300 font-poppins transition-all duration-1000 ${
+                  className={`py-6 text-xl text-gray-300 transition-all duration-1000 ${
                     isVisible
                       ? "animate-[slideInFromRight_1.0s_ease-out_forwards]"
                       : "opacity-0 translate-x-full"
@@ -61,7 +61,7 @@ const HeroHome = () => {
                   Passionate, Dedicated, Innovative, Resourceful, Self-Motivated
                 </h3>
                 <h2
-                  className={`mt-5 text-4xl font-bold leading-tight text-gray-100 sm:leading-tight sm:text-5xl lg:text-6xl lg:leading-tight font-poppins transition-all duration-1000 ${
+                  className={`mt-5 text-4xl font-bold text-gray-100 sm:text-5xl lg:text-6xl transition-all duration-1000 ${
                     isVisible
                       ? "animate-[slideInFromLeft_1.0s_ease-out_forwards]"
                       : "opacity-0 -translate-x-full"

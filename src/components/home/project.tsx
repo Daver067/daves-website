@@ -77,7 +77,7 @@ const Project: React.FC<Project> = ({
         isVisible ? "opacity-100" : "opacity-0"
       }`}
     >
-      <h4 className="mb-4 mx-auto lg:mb-10 text-3xl md:text-5xl font-bold leading-tight font-poppins text-center">
+      <h4 className="mb-4 mx-auto lg:mb-10 text-3xl md:text-5xl font-bold text-center">
         <Link href={route} id={route}>
           {name}
         </Link>
@@ -87,7 +87,7 @@ const Project: React.FC<Project> = ({
           <Flippable front={front} back={back} />
         </div>
         <div className=" w-full md:w-[70%] py-4 sm:py-0 text-center flex flex-col text-text-color ">
-          <p className="m-auto px-6 text-lg md:text-xl text-left font-poppins">
+          <p className="m-auto px-6 text-lg md:text-xl text-left ">
             {description}
           </p>
         </div>
