@@ -1,32 +1,94 @@
-import React, { useState } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import daverPhoto from "../../img/daver_photo.jpg";
 import Image from "next/image";
 
 const HeroHome = () => {
+  const [isVisible, setIsVisible] = useState(false);
+  const [navbarHeight, setNavbarHeight] = useState(0);
+  const sectionRef = useRef(null);
+
+  useEffect(() => {
+    const navbar = document.querySelector("nav");
+    if (navbar) {
+      setNavbarHeight(navbar.offsetHeight);
+    }
+  }, []);
+
+  useEffect(() => {
+    const section = sectionRef.current;
+
+    if (!section) return;
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        if (entries[0].isIntersecting) {
+          setIsVisible(true);
+        } else {
+          setIsVisible(false);
+        }
+      },
+      { threshold: 0.3 }
+    );
+
+    observer.observe(section);
+
+    return () => {
+      observer.unobserve(section);
+    };
+  }, []);
+
   return (
-    <div className="my-10 bg-zinc-800 lg:px-32 px-6 ">
-      <div className="overflow-x-hidden  pb-12">
-        <section className="pt-12  sm:pt-16">
-          <div className="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8 flex-col flex md:flex-row gap-10  ">
-            <div className="max-w-2xl mx-auto text-center m-auto ">
-              <h3 className="px-6 text-lg text-gray-300 font-inter">
-                Passionate, Dedicated, Innovative, Resourceful, Self-Motivated
-              </h3>
-              <h2 className="mt-5 text-4xl font-bold leading-tight text-gray-100 sm:leading-tight sm:text-5xl lg:text-6xl lg:leading-tight font-pj">
-                The software developer that will meet your needs
-              </h2>
+    <div
+      className="h-screen"
+      style={{
+        marginTop: `calc((100vh - 80vh - ${navbarHeight}px) / 2)`,
+      }}
+    >
+      <div className="h-[80vh] flex justify-center items-center bg-zinc-800 ">
+        <div className="overflow-x-hidden w-full">
+          <section ref={sectionRef} className="w-full">
+            <div className="mx-auto max-w-7xl flex flex-col lg:flex-row items-center justify-center gap-14 lg:gap-10">
+              <div className="max-w-2xl text-center flex-grow">
+                <h3
+                  className={`py-6 text-xl text-gray-300 font-poppins transition-all duration-1000 ${
+                    isVisible
+                      ? "animate-[slideInFromRight_1.0s_ease-out_forwards]"
+                      : "opacity-0 translate-x-full"
+                  }`}
+                >
+                  Passionate, Dedicated, Innovative, Resourceful, Self-Motivated
+                </h3>
+                <h2
+                  className={`mt-5 text-4xl font-bold leading-tight text-gray-100 sm:leading-tight sm:text-5xl lg:text-6xl lg:leading-tight font-poppins transition-all duration-1000 ${
+                    isVisible
+                      ? "animate-[slideInFromLeft_1.0s_ease-out_forwards]"
+                      : "opacity-0 -translate-x-full"
+                  }`}
+                >
+                  The software developer that will meet your needs
+                </h2>
+              </div>
+              <div
+                className={`transition-all duration-1000 w-full sm:w-1/3 md:w-1/4 ${
+                  isVisible
+                    ? "animate-[slideInFromRight_1.0s_ease-out_forwards]"
+                    : "opacity-0 translate-x-full"
+                }`}
+              >
+                <Image
+                  src={daverPhoto}
+                  className="w-52 md:w-72 rounded-full m-auto"
+                  alt="Photo of me (Dave) drinking coffee"
+                  width={480}
+                  height={640}
+                />
+              </div>
             </div>
-            <Image
-              src={daverPhoto}
-              className="lg:w-60 rounded-full w-44 m-auto pt-10 md:pt-0"
-              alt="Photo of me (Dave) drinking coffee"
-              width={480}
-              height={640}
-            />
-          </div>
-        </section>
+          </section>
+        </div>
       </div>
     </div>
   );
 };
+
 export default HeroHome;

@@ -63,23 +63,23 @@ const Project: React.FC<Project> = ({
           <p className="m-auto px-6 text-s md:text-lg text-left font-poppins">
             {description}
           </p>
-          <div className=" flex justify-center pt-4 mb-2 gap-5">
+          <div className=" flex flex-col md:flex-row justify-center pt-4 mb-2 gap-0 md:gap-5 ">
             <Link
               href={repo}
-              className="text-white bg-[#24292F] hover:bg-[#24292F]/90 focus:ring-4 focus:outline-none focus:ring-[#24292F]/50 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center gap-2 dark:focus:ring-gray-500 dark:hover:bg-[#050708]/30 me-2 mb-2"
+              className="text-white bg-tertiary-color hover:scale-125 hover:-rotate-6  duration-300 focus:ring-4 focus:outline-none font-medium rounded-lg text-lg px-5 py-2.5 text-center items-center gap-2 me-2 mb-2 flex justify-center"
             >
               <FaGithub />
               See the Repo
             </Link>
             <Link
-              className="text-white bg-[#24292F] hover:bg-[#24292F]/90 focus:ring-4 focus:outline-none focus:ring-[#24292F]/50 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center dark:focus:ring-gray-500 dark:hover:bg-[#050708]/30 me-2 mb-2"
+              className="text-white bg-tertiary-color hover:scale-125 duration-300 focus:ring-4 focus:outline-none font-medium rounded-lg text-lg px-5 py-2.5 text-center items-center gap-2 me-2 mb-2 flex justify-center"
               href={route}
             >
               More Info
             </Link>
             <Link
               href={website}
-              className="text-white bg-[#24292F] hover:bg-[#24292F]/90 focus:ring-4 focus:outline-none focus:ring-[#24292F]/50 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center gap-2 dark:focus:ring-gray-500 dark:hover:bg-[#050708]/30 me-2 mb-2"
+              className="text-white bg-tertiary-color hover:scale-125 hover:rotate-6 duration-300 focus:ring-4 focus:outline-none font-medium rounded-lg text-lg px-5 py-2.5 text-center items-center gap-2 me-2 mb-2 flex justify-center"
             >
               <IoIosGlobe />
               Visit the Page
