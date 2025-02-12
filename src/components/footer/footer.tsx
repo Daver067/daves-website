@@ -19,7 +19,7 @@ const Footer: React.FC<Footer> = ({}) => {
                 href="https://www.facebook.com/dave.diemert"
                 className="hover:text-text-color-hovering"
               >
-                <div className="flex">
+                <div className="flex hover:scale-150 hover:text-text-color-hovering duration-500">
                   <FaFacebook className="my-auto" />
                   <h3 className="pl-3">Facebook</h3>
                 </div>
@@ -28,7 +28,7 @@ const Footer: React.FC<Footer> = ({}) => {
                 href="https://www.instagram.com/davediemert/"
                 className="hover:text-text-color-hovering"
               >
-                <div className="flex">
+                <div className="flex hover:scale-150 hover:text-text-color-hovering duration-500">
                   <FaInstagram className="my-auto" />
                   <h3 className="pl-3">Instagram</h3>
                 </div>
@@ -39,7 +39,7 @@ const Footer: React.FC<Footer> = ({}) => {
                 href="https://www.linkedin.com/in/dave-diemert-a47135306/"
                 className="hover:text-text-color-hovering"
               >
-                <div className="flex">
+                <div className="flex hover:scale-150 hover:text-text-color-hovering duration-500">
                   <FaLinkedin className="my-auto" />
                   <h3 className="pl-3">LinkedIn</h3>
                 </div>
@@ -48,7 +48,7 @@ const Footer: React.FC<Footer> = ({}) => {
                 href="https://github.com/Daver067"
                 className="hover:text-text-color-hovering"
               >
-                <div className="flex">
+                <div className="flex hover:scale-150 hover:text-text-color-hovering duration-500">
                   <FaGithub className="my-auto" />
                   <h3 className="pl-3">Github</h3>
                 </div>

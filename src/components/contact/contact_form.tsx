@@ -45,7 +45,6 @@ const ContactForm: React.FC = () => {
       response = await response.json();
       setSubmitted(true);
     } catch (error) {
-      // Handle error
       console.error("Error submitting form:", error);
     }
   };
