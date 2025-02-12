@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import Image, { StaticImageData } from "next/image";
 import { useRouter } from "next/navigation";
 import languagepics from "../../img/languages";
@@ -25,7 +25,33 @@ const Project: React.FC<Project> = ({
   website,
   languages,
 }) => {
-  const router = useRouter();
+  const [isVisible, setIsVisible] = useState(false);
+  const projectRef = useRef(null);
+
+  // IntersectionObserver hook to detect when the component comes into view
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        if (entries[0].isIntersecting) {
+          setIsVisible(true); // Trigger the animation
+        } else {
+          setIsVisible(false); // Optional: remove this to animate only once
+        }
+      },
+      { threshold: 0.4 } // Trigger when 30% of the section is visible
+    );
+
+    if (projectRef.current) {
+      observer.observe(projectRef.current);
+    }
+
+    return () => {
+      if (projectRef.current) {
+        observer.unobserve(projectRef.current);
+      }
+    };
+  }, []);
+
   const back = (
     <div className="h-full w-full grid grid-cols-4 gap-2 bg-zinc-600">
       {languages.map((language: string) => {
@@ -43,24 +69,29 @@ const Project: React.FC<Project> = ({
 
   const front = (
     <div className="">
-      <Image className="" src={img} alt={name} height={400} width={600} />
+      <Image className="" src={img} alt={name} height={600} width={900} />
     </div>
   );
 
   return (
-    <div className="w-full lg:px-60 pb-3 border-t-2 border-zinc-500">
-      <div className="h-full pt-4 px-4 mx-auto flex flex-col-reverse md:flex-row min-h-64 md:gap-20 xs-items-center ">
+    <div
+      ref={projectRef}
+      className={`w-full xl:px-[15vw] pb-3 border-t-2 border-zinc-500 lg:py-[15vh] transition-opacity duration-1000 ${
+        isVisible ? "opacity-100" : "opacity-0"
+      }`}
+    >
+      <div className="h-full pt-4 px-4 mx-auto flex flex-col-reverse md:flex-row min-h-64 md:min-h-[50vh] md:gap-20 xs-items-center ">
         <div className="w-[90%] h-80 md:w-[30%] relative my-2 self-center ">
           <Flippable front={front} back={back} />
         </div>
-        <div className=" w-full md:w-[70%] text-center flex flex-col text-gray-300 ">
-          <div className="mb-4 text-2xl md:text-4xl font-bold leading-tight font-poppins pt-4">
+        <div className=" w-full md:w-[70%] text-center flex flex-col text-text-color ">
+          <div className="mb-4 text-4xl md:text-6xl font-bold leading-tight font-poppins pt-4">
             <Link href={route} id={route}>
               {name}
             </Link>
           </div>
 
-          <p className="m-auto px-6 text-s md:text-lg text-left font-poppins">
+          <p className="m-auto px-6 text-lg md:text-xl text-left font-poppins">
             {description}
           </p>
           <div className=" flex flex-col md:flex-row justify-center pt-4 mb-2 gap-0 md:gap-5 ">
