@@ -32,8 +32,8 @@ const DropDown: React.FC<DropDown> = ({ childrenString, dropDownName }) => {
     <li className="mb-4 ps-2 lg:mb-0 lg:pe-1 lg:ps-0 ">
       <div
         className="flex flex-wrap "
-        onMouseEnter={() => setIsOpen(true)}
-        onMouseLeave={() => setIsOpen(false)}
+        onMouseOver={() => setIsOpen(true)}
+        onMouseOut={() => setIsOpen(false)}
       >
         <div className="relative ms-2">
           <a
@@ -64,7 +64,7 @@ const DropDown: React.FC<DropDown> = ({ childrenString, dropDownName }) => {
           </a>
           <ul
             ref={dropdownRef}
-            className="absolute z-[1000] overflow-hidden transition-all duration-1000 ease-in-out bg-tertiary-color shadow-lg rounded-b-lg mt-4"
+            className="absolute z-[1000] overflow-hidden transition-all duration-500 ease-in-out bg-tertiary-color shadow-lg rounded-b-lg mt-4"
             style={{ height: "0px" }}
           >
             {childrenString.map((item) => (

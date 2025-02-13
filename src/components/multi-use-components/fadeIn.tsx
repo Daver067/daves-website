@@ -1,49 +1,26 @@
-import React, { useState, useEffect, useRef } from "react";
+import React, { useRef } from "react";
+import { motion, useInView } from "framer-motion";
 
 interface FadeInProps {
   children: React.ReactNode;
+  duration?: number;
 }
 
-const FadeIn: React.FC<FadeInProps> = ({ children }) => {
-  const [isVisible, setIsVisible] = useState(false);
-  const elementRef = useRef<HTMLDivElement | null>(null);
+const FadeIn: React.FC<FadeInProps> = ({ children, duration = 1.5 }) => {
+  const ref = useRef(null);
 
-  useEffect(() => {
-    const element = elementRef.current;
-    if (!element) return;
-
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            setIsVisible(true);
-          } else {
-            setIsVisible(false);
-          }
-        });
-      },
-      {
-        rootMargin: "-51% 0%",
-        threshold: 0,
-      }
-    );
-
-    observer.observe(element);
-
-    return () => {
-      observer.unobserve(element);
-    };
-  }, []);
+  const isInView = useInView(ref, { once: true, margin: "0px 0px -200px 0px" });
 
   return (
-    <div
-      ref={elementRef}
-      className={`transition-opacity duration-[1200ms] ${
-        isVisible ? "opacity-100" : "opacity-0"
-      }`}
+    <motion.div
+      ref={ref}
+      initial={{ opacity: 0 }}
+      animate={isInView ? { opacity: 1, x: 0 } : {}}
+      transition={{ duration: duration }}
+      className="will-change-opacity"
     >
       {children}
-    </div>
+    </motion.div>
   );
 };
 

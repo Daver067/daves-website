@@ -130,12 +130,13 @@ const ContactForm: React.FC = () => {
                 Message:
               </label>
               <textarea
-                className=" h-36 md:h-36 px-4 py-2 rounded-xl text-slate-800 bg-gray-200"
+                className=" h-36 md:h-36 px-4 py-2 rounded-xl text-slate-800 bg-gray-200 resize-none"
                 placeholder="Leave me a message!"
                 id="message"
                 name="message"
                 value={textareaContent}
                 onChange={(e) => setTextareaContent(e.target.value)}
+                draggable={false}
               ></textarea>
             </div>
             <div className="flex justify-end">

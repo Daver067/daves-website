@@ -30,13 +30,13 @@ const HeroAbout = () => {
             skill.style.transition = "transform 1s ease-out, opacity 0.5s";
             skill.style.transform = "translate(0, 0)";
             skill.style.opacity = "1";
-          }, index * 125 + 50);
+          }, index * 50 + 25);
         }
       });
 
       setTimeout(() => {
         document.body.style.overflowX = "auto";
-      }, skillRefs.current.length * 125 + 1000);
+      }, skillRefs.current.length * 50 + 1000);
     }, 500);
   }, []);
 
@@ -60,34 +60,37 @@ const HeroAbout = () => {
         <div className="w-full bg-zinc-800">
           <div className="w-[95vw] mx-auto flex justify-center flex-col lg:flex-row lg:w-[80vw] lg:py-12">
             <div className="w-[80%] mx-auto lg:w-[45%] mb-10 lg:mb-auto lg:pb-5">
-              <div className="text-2xl text-center py-5">Hey I{`'`}m Dave!</div>
-
-              <div className="">
-                <p className="pb-4">
-                  I{`'`}m a self-taught web developer from Alberta, Canada where
-                  I also work full-time as a licensed Electrician.
-                </p>
-                <p className="pb-4">
-                  I began my programming journey following{" "}
-                  <a
-                    className="text-blue-500 hover:text-blue-700 hover:underline transition duration-200 ease-in-out"
-                    href="https://www.theodinproject.com"
-                  >
-                    The Odin Project{`'`}s
-                  </a>{" "}
-                  Full Stack JavaScript Course.
-                </p>
-                <p className="pb-4">
-                  After The Odin Project, I continued my learning working on
-                  personal projects such as Solitaire, Phone Phlinger, and this
-                  personal site.
-                </p>
-                <p>
-                  I prefer the functional side of programming as opposed to the
-                  design aspect. I have a knack for solving problems, and that
-                  is what I enjoy most from programming.
-                </p>
-              </div>
+              <FadeIn duration={3}>
+                <div className="text-2xl text-center py-5">
+                  Hey I{`'`}m Dave!
+                </div>
+                <div className="">
+                  <p className="pb-4">
+                    I{`'`}m a self-taught web developer from Alberta, Canada
+                    where I also work full-time as a licensed Electrician.
+                  </p>
+                  <p className="pb-4">
+                    I began my programming journey following{" "}
+                    <a
+                      className="text-blue-500 hover:text-blue-700 hover:underline transition duration-200 ease-in-out"
+                      href="https://www.theodinproject.com"
+                    >
+                      The Odin Project{`'`}s
+                    </a>{" "}
+                    Full Stack JavaScript Course.
+                  </p>
+                  <p className="pb-4">
+                    After The Odin Project, I continued my learning working on
+                    personal projects such as Solitaire, Phone Phlinger, and
+                    this personal site.
+                  </p>
+                  <p>
+                    I prefer the functional side of programming as opposed to
+                    the design aspect. I have a knack for solving problems, and
+                    that is what I enjoy most from programming.
+                  </p>
+                </div>
+              </FadeIn>
             </div>
             <div className="mx-auto w-[80%] lg:w-[30%] pb-5">
               <div className="text-2xl py-5 text-center">Some of my skills</div>

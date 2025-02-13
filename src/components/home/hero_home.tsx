@@ -1,40 +1,19 @@
 import React, { useState, useEffect, useRef } from "react";
 import daverPhoto from "../../img/daver_photo.jpg";
 import Image from "next/image";
+import { motion, useInView } from "framer-motion";
 
 const HeroHome = () => {
-  const [isVisible, setIsVisible] = useState(false);
   const [navbarHeight, setNavbarHeight] = useState(0);
+  const [isLoaded, setIsLoaded] = useState(false);
   const sectionRef = useRef(null);
+  const isInView = useInView(sectionRef, { once: true, margin: "-100px 0px" });
 
   useEffect(() => {
     const navbar = document.querySelector("nav");
     if (navbar) {
       setNavbarHeight(navbar.offsetHeight);
     }
-  }, []);
-
-  useEffect(() => {
-    const section = sectionRef.current;
-
-    if (!section) return;
-
-    const observer = new IntersectionObserver(
-      (entries) => {
-        if (entries[0].isIntersecting) {
-          setIsVisible(true);
-        } else {
-          setIsVisible(false);
-        }
-      },
-      { threshold: 0.3 }
-    );
-
-    observer.observe(section);
-
-    return () => {
-      observer.unobserve(section);
-    };
   }, []);
 
   return (
@@ -51,40 +30,42 @@ const HeroHome = () => {
           <section ref={sectionRef} className="w-full">
             <div className="mx-auto max-w-7xl flex flex-col lg:flex-row items-center justify-center gap-14 lg:gap-10">
               <div className="max-w-2xl text-center flex-grow">
-                <h3
-                  className={`py-6 text-xl text-gray-300 transition-all duration-1000 ${
-                    isVisible
-                      ? "animate-[slideInFromRight_1.0s_ease-out_forwards]"
-                      : "opacity-0 translate-x-full"
-                  }`}
+                <motion.h3
+                  initial={{ opacity: 0, x: 1000 }}
+                  animate={isInView && isLoaded ? { opacity: 1, x: 0 } : {}}
+                  transition={{ duration: 1, ease: "easeOut" }}
+                  className="py-6 text-xl text-gray-300"
                 >
                   Passionate, Dedicated, Innovative, Resourceful, Self-Motivated
-                </h3>
-                <h2
-                  className={`mt-5 text-4xl font-bold text-gray-100 sm:text-5xl lg:text-6xl transition-all duration-1000 ${
-                    isVisible
-                      ? "animate-[slideInFromLeft_1.0s_ease-out_forwards]"
-                      : "opacity-0 -translate-x-full"
-                  }`}
+                </motion.h3>
+                <motion.h2
+                  initial={{ opacity: 0, x: -1000 }}
+                  animate={isInView && isLoaded ? { opacity: 1, x: 0 } : {}}
+                  transition={{ duration: 1, ease: "easeOut" }}
+                  className="mt-5 text-4xl font-bold text-gray-100"
                 >
                   The software developer that will meet your needs
-                </h2>
+                </motion.h2>
               </div>
-              <div
+              <motion.div
+                initial={{ opacity: 0, x: 1000 }}
+                animate={isInView && isLoaded ? { opacity: 1, x: 0 } : {}}
+                transition={{ duration: 0.25, ease: "easeOut" }}
                 className={`transition-all duration-1000 w-full sm:w-1/3 md:w-1/4 ${
-                  isVisible
-                    ? "animate-[slideInFromRight_1.0s_ease-out_forwards]"
-                    : "opacity-0 translate-x-full"
+                  isLoaded ? "opacity-100" : "opacity-0"
                 }`}
               >
                 <Image
                   src={daverPhoto}
-                  className="w-52 md:w-72 rounded-full m-auto"
                   alt="Photo of me (Dave) drinking coffee"
                   width={480}
                   height={640}
+                  className="w-52 md:w-72 rounded-full m-auto"
+                  onLoadingComplete={() => setIsLoaded(true)}
+                  loading="eager"
+                  priority
                 />
-              </div>
+              </motion.div>
             </div>
           </section>
         </div>
