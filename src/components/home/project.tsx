@@ -49,7 +49,7 @@ const Project: React.FC<Project> = ({
   return (
     <FadeIn>
       <div
-        className={`w-full xl:px-[15vw] pb-3 border-t-2 border-zinc-500 py-[5vh] lg:py-[10vh] transition-opacity duration-1200 `}
+        className={`w-full xl:px-[15vw] pb-3 border-t-2 border-zinc-500 py-[5vh] lg:py-[10vh] `}
       >
         <h4 className="mb-4 mx-auto lg:mb-10 text-3xl md:text-5xl font-bold text-center">
           <Link href={route} id={route}>

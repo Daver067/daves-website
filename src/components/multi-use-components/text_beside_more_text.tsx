@@ -18,8 +18,7 @@ const TextBesideText: React.FC<TextBesideText> = ({
   return (
     <FadeIn>
       <div
-        className={` min-h-[50vh] pt-5 w-screen text-lg lg:text-xl box-border transition-opacity duration-1200
-        `}
+        className={` min-h-[50vh] pt-5 w-screen text-lg lg:text-xl box-border`}
       >
         <div
           className={`w-[95vw]  lg:w-[70vw] mx-auto flex flex-col gap-10 lg:gap-0 ${
