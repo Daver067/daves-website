@@ -12,7 +12,7 @@ export default function Contact() {
     <div className="min-h-screen flex flex-col font-poppins text-lg lg:text-xl tracking-wide ">
       <PageNav />
       <FadeIn>
-        <div className="mb-auto">
+        <div className="mb-auto min-h-[85vh]">
           <ContactHero />
           <ContactForm />
         </div>

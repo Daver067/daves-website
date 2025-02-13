@@ -14,9 +14,7 @@ export default function Mocc() {
   return (
     <div className="min-h-screen tracking-wide font-poppings">
       <PageNav />
-      <h2 className="w-full text-center text-4xl pt-20 pb-5 md:pb-20 underline decoration-1 underline-offset-4">
-        Calgary Cleaning Site
-      </h2>
+      <h2 className="project-page-h2 md:py-20">Calgary Cleaning Site</h2>
       <Image_And_Text
         img={
           <div className=" w-full m-auto ">

@@ -13,9 +13,7 @@ export default function Phlinger() {
   return (
     <div className=" min-h-screen flex flex-col tracking-wide font-poppins ">
       <PageNav />
-      <h2 className="w-full text-center text-4xl pt-20 pb-5 lg:pb-20 underline decoration-1 underline-offset-4">
-        Phone Phlinger
-      </h2>
+      <h2 className="project-page-h2 md:py-20"> Phone Phlinger</h2>
       <Image_And_Text
         img={
           <div className=" w-full m-auto ">

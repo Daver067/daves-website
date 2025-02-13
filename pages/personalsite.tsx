@@ -13,9 +13,7 @@ export default function PersonalSite() {
   return (
     <div className="min-h-screen font-poppins tracking-wide text-lg lg:text-xl">
       <PageNav />
-      <h2 className="w-full text-center text-4xl pt-20 pb-5 md:pb-20 underline decoration-1 underline-offset-4">
-        This Website!
-      </h2>
+      <h2 className="project-page-h2 md:py-20">This Website!</h2>
       <TextBesideText
         header1="What Tech Stack Did I Use?"
         paragraphs1={[
@@ -24,7 +22,9 @@ export default function PersonalSite() {
         ]}
         header2="Did I Use Any Libraries?"
         paragraphs2={[
-          `I used react-icons for some of the icons throughout my site as well as tailwindCSS. I did not use any component libraries, everything you see here was made by me!`,
+          `I used react-icons for some of the icons throughout my site as well as tailwindCSS. I built a lot of the animations originally using IntersectionObserver, 
+          which later led me to find out Safari and Firefox don't have much support for it. I decided to use a library - framer-motion for my animations. Framer motion is the only component library I
+          have used, everything else was built exclusively by me!`,
         ]}
       ></TextBesideText>
 
