@@ -10,12 +10,13 @@ const projects = [
     img: phlingerPhoto,
     description: `Phone Phlinger is a tool used to make the Twilio interface more user 
       friendly. Twilio is a cloud communication platform used by many 
-      organizations for phone, text, and email communications. Phone Phlinger 
-      enables easy use of Call-Forwarding, Voicemail, Whisper Messages, 
+      organizations for phone, text, and email communications. Twilio products are developed as desktop experiences, 
+      as Phone Phlinger is built with Twilio Paste assets, Phone Phlinger is also built as a desktop experience.
+      Phone Phlinger enables easy use of Call-Forwarding, Voicemail, Whisper Messages, 
       Caller Greeting Messages, Call Recording, and Call Tracking for all of 
-      your Twilio phone numbers. My app also includes email followups upon ending 
-      an active phone call which includes the call recording (if available) and 
-      basic call information on all calls to your Twilio Phone Numbers. A Twilio 
+      your Twilio phone numbers. This app also includes email follow-ups upon ending 
+      an active phone call. Included in the email is: the call recording (if available) and 
+      basic call information: caller number, caller location, call duration. A Twilio 
       account is required. Sorry, the Repo is currently on private, please contact 
       me for a chance to view the Repo.`,
     repo: "https://daves-website-theta.vercel.app/contact",

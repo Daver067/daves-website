@@ -27,7 +27,14 @@ export default function Phlinger() {
         }
         header="What Is It?"
         paragraphs={[
-          " Phone Phlinger is an app targeted towards rank and rent online businesses. Rank and rent businesses will develop web pages, locally rank them to the top of google, and then try to sell the leads that are generated from their website. Leads that come in from a phone number listed on the webpage are the most valuable, and easiest to convert to a sale. There are multiple choices for getting cheap local VOIP phone numbers online, Twilio is a well known provider. The Twilio interface is aimed at developers, and can be overwhelming to set up something as simple as call forwarding. Phone Phlinger makes call forwarding a breeze, along with lots of extras. Phone Phlinger can handle call forwarding, voicemail, whisper messages, caller greetings, call recording, and call tracking with email notifications.",
+          `Phone Phlinger is an app targeted towards rank and rent online businesses. 
+          Rank and rent businesses will develop web pages, locally rank them to the top of google, 
+          and then try to sell the leads that are generated from their website. Leads that come in from a phone number 
+          listed on the webpage are the most valuable, and easiest to convert to a sale. There are multiple choices for 
+          getting cheap local VOIP phone numbers online, Twilio is a well known provider. The Twilio interface is aimed at 
+          developers, and can be overwhelming to set up something as simple as call forwarding. Phone Phlinger makes call 
+          forwarding a breeze, along with lots of extras. Phone Phlinger can handle call forwarding, voicemail, whisper messages, 
+          caller greetings, call recording, and call tracking with email notifications.`,
         ]}
       ></Image_And_Text>
       <div className="md:mt-28"></div>
@@ -45,7 +52,9 @@ export default function Phlinger() {
         }
         header="Can You Show Me A Demo?"
         paragraphs={[
-          "                    Of course! Check out the demo video! I only use a trial Twilio account for testing calls, so please ignore the warning message at the start of my phone calls. A paid Twilio account wont have those warnings. Also sorry for the blurs, those are my actual phone numbers and personal email addresses!",
+          `Of course! Check out the demo video! I only use a trial Twilio account for testing calls,
+           so please ignore the warning message at the start of my phone calls. A paid Twilio account
+            wont have those warnings. Also sorry for the blurs, those are my actual phone numbers and personal email addresses!`,
         ]}
       ></Image_And_Text>
 
@@ -85,7 +94,7 @@ export default function Phlinger() {
           `So, in my spare time while backpacking across Asia, the Phlinger was born!`,
           `It is in a state of perpetual updates, and feature additions. On-boarding of
             new clients still requires a manual process, but apart from the inital setup, 
-            everything is working exceptionally for all of my clients. (There's one, I have
+            everything is working exceptionally for all of my clients. (There's one, I have one
             client for this.)`,
         ]}
       ></TextBesideText>
