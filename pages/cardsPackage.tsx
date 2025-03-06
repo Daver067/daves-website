@@ -51,7 +51,7 @@ export default function Solitaire() {
         paragraphs={[
           `On my searching I could only find a couple of similar packages, none of which had as many features as what we planned on making. 
           A lot of packages will provide nicer looking cards (we aimed for no images, only text and css). But none offered anything for interactivity or 
-          animation, or easy to understand rules systems. I believe that the ease of using our package can enable beginner programmers to build card games easily!)`,
+          animation, or easy to understand rules systems. I believe that the ease of using our package can enable beginner programmers to build card games easily!`,
         ]}
       ></Image_And_Text>
       <div className="md:mt-28"></div>
