@@ -17,6 +17,7 @@ const PageNav: React.FC = () => {
         },
         { name: "About Me", route: "/about", type: "link" },
         { name: "Contact", route: "/contact", type: "link" },
+        { name: "Resume", route: "/resume", type: "link" },
       ]}
     />
   );
