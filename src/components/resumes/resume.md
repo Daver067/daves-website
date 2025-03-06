@@ -1,6 +1,6 @@
 # Dave Diemert
 
-(604) eight/six/one-9210 | [davediemert_88@hotmail.com](mailto:davediemert_88@hotmail.com) | Edmonton, AB | [davediemert.com](https://www.davediemert.com)
+(604) eight/six/one-9210 | [davediemert_88@hotmail.com](mailto:davediemert_88@hotmail.com) | Edmonton, AB | [personal site](https://www.davediemert.com) | [GitHub](https://github.com/Daver067)
 
 ---
 

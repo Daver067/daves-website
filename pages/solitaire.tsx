@@ -6,6 +6,7 @@ import Image from "next/image";
 import solitairePlaying from "../src/img/projects/solitaire_in_progress.png";
 import RepoWebsiteButtons from "@/src/components/multi-use-components/repo_website_buttons";
 import FadeIn from "@/src/components/multi-use-components/fadeIn";
+import Link from "next/link";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -68,9 +69,9 @@ export default function Solitaire() {
             Any Further Plans With This Project?
           </h3>
           <p className="relative text-left py-2 ">
-            Yes! The other developer and I are actually considering making a npm
-            package for handling cards. It{"'"}s still in early stages, but we
-            are optimistic!
+            Yes! It is actually completed, well, isn{"'"}t everything just an
+            ongoing work in progress? Check out my other project{" "}
+            <Link href={"/cardsPackage"}>card-factory NPM Package.</Link>
           </p>
         </div>
       </FadeIn>

@@ -15,6 +15,8 @@ import tailwind from "./languages/tailwindcss.svg";
 import twilio from "./languages/twilio.svg";
 import vercel from "./languages/vercel-icon.svg";
 import webpack from "./languages/webpack.svg";
+import typescript from "./languages/typescript.svg";
+import vite from "./languages/vite.svg";
 
 const languagespics = {
   python: (
@@ -155,6 +157,24 @@ const languagespics = {
   webpack: (
     <Image
       src={webpack}
+      alt="webpack"
+      height={48}
+      width={48}
+      className=" max-w-12 max-h-12 "
+    />
+  ),
+  typescript: (
+    <Image
+      src={typescript}
+      alt="webpack"
+      height={48}
+      width={48}
+      className=" max-w-12 max-h-12 "
+    />
+  ),
+  vite: (
+    <Image
+      src={vite}
       alt="webpack"
       height={48}
       width={48}

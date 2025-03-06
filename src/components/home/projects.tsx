@@ -2,6 +2,7 @@ import phlingerPhoto from "../../img/projects/phlinger.png";
 import mocc from "../../img/projects/mocc.png";
 import solitaire from "../../img/projects/solitaire.png";
 import personal from "../../img/projects/personal.png";
+import cardsnpm from "../../img/projects/cards-package.png";
 
 const projects = [
   {
@@ -36,6 +37,17 @@ const projects = [
       "twilio",
       "vercel",
     ],
+  },
+  {
+    name: "card-factory NPM Package",
+    route: "/cardsPackage",
+    img: cardsnpm,
+    description: `This was built off of my project solitaire. The other developer and I decided to create
+    an npm package to enable others to use our card foundations. We took the basics from Solitaire, cleaned up a lot of the smaller issues
+    and added typescript support. The documentation included in the demo website is quite extensive and easy to follow along. `,
+    repo: "https://github.com/Daver067/cards-npm-package",
+    website: "https://card-factory.info",
+    languages: ["html", "css", "javascript", "typescript", "vite"],
   },
   {
     name: "Calgary Cleaning Site",
