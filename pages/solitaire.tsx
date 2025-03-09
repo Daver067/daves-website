@@ -76,7 +76,7 @@ export default function Solitaire() {
         </div>
       </FadeIn>
       <FadeIn>
-        <RepoWebsiteButtons projectArr={2} />
+        <RepoWebsiteButtons projectArr={3} />
       </FadeIn>
       <Footer />
     </div>

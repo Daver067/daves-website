@@ -51,7 +51,7 @@ export default function PersonalSite() {
           </p>
         </div>
       </FadeIn>
-      <RepoWebsiteButtons projectArr={3} />
+      <RepoWebsiteButtons projectArr={4} />
       <Footer />
     </div>
   );

@@ -10,7 +10,7 @@ import FadeIn from "@/src/components/multi-use-components/fadeIn";
 
 const inter = Inter({ subsets: ["latin"] });
 
-export default function Solitaire() {
+export default function CardsNpmPackage() {
   return (
     <div className="min-h-screen font-poppins text-lg lg:text-xl tracking-wide">
       <PageNav />
@@ -90,7 +90,7 @@ export default function Solitaire() {
         </div>
       </FadeIn>
       <FadeIn>
-        <RepoWebsiteButtons projectArr={2} />
+        <RepoWebsiteButtons projectArr={1} />
       </FadeIn>
       <Footer />
     </div>

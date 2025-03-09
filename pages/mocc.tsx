@@ -76,7 +76,7 @@ export default function Mocc() {
           learning adventure.`,
         ]}
       ></Image_And_Text>
-      <RepoWebsiteButtons projectArr={1} />
+      <RepoWebsiteButtons projectArr={2} />
       <Footer />
     </div>
   );
