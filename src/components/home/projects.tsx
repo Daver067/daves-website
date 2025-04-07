@@ -20,8 +20,8 @@ const projects = [
       basic call information: caller number, caller location, call duration. A Twilio 
       account is required. Sorry, the Repo is currently on private, please contact 
       me for a chance to view the Repo.`,
-    repo: "https://daves-website-theta.vercel.app/contact",
-    website: "https://phlinger-frontend-paste.vercel.app",
+    repo: "https://www.davediemert.com/contact",
+    website: "https://www.phone-phlinger.com",
     languages: [
       "python",
       "aws",

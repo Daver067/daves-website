@@ -24,7 +24,7 @@ Passionate and driven self taught web developer with a strong foundation in fron
 
 ## Projects & Experience
 
-### [Phone Phlinger](https://phlinger-frontend-paste.vercel.app/)
+### [Phone Phlinger](https://www.phone-phlinger.com/)
 
 - Built using the Twilio API to handle, re-route, record, and track phone calls to a VOIP phone number.
 - Directed at rank-and-rent websites to manage phone calls for their platforms.
